@@ -1,0 +1,31 @@
+---
+interface Props {
+  tags: Map<string, number>;
+  activeTag?: string;
+}
+
+const { tags, activeTag } = Astro.props;
+const sortedTags = [...tags.entries()].sort((a, b) => b[1] - a[1]);
+---
+
+<div class="flex flex-wrap gap-2">
+  {sortedTags.map(([tag, count]) => (
+    <a
+      href={`/tags/${tag}`}
+      class:list={[
+        'inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm font-medium transition-all duration-300',
+        tag === activeTag
+          ? 'bg-gradient-to-r from-neon-sky to-gp-600 text-white shadow-glow'
+          : 'glass hover:shadow-glow text-gray-700 dark:text-gray-300 hover:text-gp-600 dark:hover:text-neon-sky',
+      ]}
+    >
+      #{tag}
+      <span class:list={[
+        'text-xs',
+        tag === activeTag ? 'text-white/70' : 'text-gray-400 dark:text-gray-500',
+      ]}>
+        ({count})
+      </span>
+    </a>
+  ))}
+</div>

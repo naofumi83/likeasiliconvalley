@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+const sorted = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+// Group by year and month
+const grouped = new Map<string, Map<string, typeof sorted>>();
+for (const post of sorted) {
+  const year = post.data.date.getFullYear().toString();
+  const monthLabel = post.data.date.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long' });
+
+  if (!grouped.has(year)) grouped.set(year, new Map());
+  const yearMap = grouped.get(year)!;
+  if (!yearMap.has(monthLabel)) yearMap.set(monthLabel, []);
+  yearMap.get(monthLabel)!.push(post);
+}
+---
+
+<BaseLayout title="Archive" description="記事アーカイブ - 年月別の記事一覧">
+  <div class="flex items-center gap-3 mb-10">
+    <h1 class="text-3xl font-bold text-gray-900 dark:text-white">
+      Archive
+    </h1>
+    <div class="flex-1 h-px bg-gradient-to-r from-gray-200 dark:from-white/10 to-transparent"></div>
+  </div>
+
+  <div class="space-y-12">
+    {[...grouped.entries()].map(([year, months]) => (
+      <section>
+        <h2 class="text-2xl font-bold gradient-text mb-6 sticky top-16 glass-heavy py-3 px-4 -mx-4 rounded-xl z-10">
+          {year}
+        </h2>
+
+        <div class="space-y-8 ml-4 border-l border-gray-200/50 dark:border-white/[0.06] pl-6">
+          {[...months.entries()].map(([monthLabel, posts]) => (
+            <div>
+              <h3 class="text-sm font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-4 relative">
+                <span class="absolute -left-[calc(1.5rem+4px)] top-1 w-2 h-2 rounded-full bg-gradient-to-r from-neon-sky to-gp-600 glow-dot"></span>
+                {monthLabel}
+              </h3>
+              <ul class="space-y-2">
+                {posts.map(post => (
+                  <li>
+                    <a
+                      href={`/posts/${post.slug}`}
+                      class="group flex items-baseline gap-3 py-1.5 px-3 -mx-3 rounded-lg hover:bg-gray-100/50 dark:hover:bg-white/[0.03] transition-colors duration-200"
+                    >
+                      <time
+                        datetime={post.data.date.toISOString()}
+                        class="text-xs text-gray-400 dark:text-gray-600 font-mono shrink-0 tabular-nums"
+                      >
+                        {post.data.date.toLocaleDateString('ja-JP', { month: '2-digit', day: '2-digit' })}
+                      </time>
+                      <span class="text-gray-800 dark:text-gray-200 group-hover:text-gp-600 dark:group-hover:text-neon-sky transition-colors duration-200">
+                        {post.data.title}
+                      </span>
+                      {post.data.source && (
+                        <span class:list={[
+                          'text-[10px] px-1.5 py-0.5 rounded font-medium shrink-0',
+                          post.data.source === 'blogspot'
+                            ? 'bg-orange-100/60 dark:bg-orange-500/10 text-orange-500 dark:text-orange-400'
+                            : 'bg-gp-100/60 dark:bg-neon-sky/10 text-gp-600 dark:text-neon-sky',
+                        ]}>
+                          {post.data.source}
+                        </span>
+                      )}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</BaseLayout>

@@ -1,0 +1,27 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-gray-200/50 dark:border-white/[0.06] bg-white/50 dark:bg-white/[0.02]">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-6 h-6 rounded-md bg-gradient-to-br from-neon-sky via-gp-600 to-gp-800 flex items-center justify-center">
+          <span class="text-[8px] font-bold text-white">SV</span>
+        </div>
+        <p class="text-sm text-gray-500 dark:text-gray-500">
+          &copy; {year} Like a Silicon Valley
+        </p>
+      </div>
+      <div class="flex items-center gap-5 text-sm text-gray-400 dark:text-gray-500">
+        <a href="/rss.xml" class="hover:text-gp-600 dark:hover:text-neon-sky transition-colors duration-200">
+          RSS
+        </a>
+        <span class="w-px h-3 bg-gray-200 dark:bg-white/10"></span>
+        <span>
+          Built with <a href="https://astro.build" class="hover:text-gp-600 dark:hover:text-neon-sky transition-colors duration-200" target="_blank" rel="noopener">Astro</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</footer>

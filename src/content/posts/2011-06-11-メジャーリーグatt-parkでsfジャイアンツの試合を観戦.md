@@ -1,0 +1,46 @@
+---
+title: "メジャーリーグAT＆T ParkでSFジャイアンツの試合を観戦"
+date: 2011-06-11
+description: "[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5UWNYraX8cTlRjvJg9RuhOCW-dzq29eEm-7pWXZfktRTfA-6om7OrGL"
+tags: []
+source: "blogspot"
+---
+
+[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5UWNYraX8cTlRjvJg9RuhOCW-dzq29eEm-7pWXZfktRTfA-6om7OrGLMna_sYqXET6VyFf1Yh-GojoVZeucYlsWdMvFXLGAqS7FkL8d48cdepQ2bIHLBt9yJycWhCPLTV4F6oXWpX3_1l/s400/iPhoto.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5UWNYraX8cTlRjvJg9RuhOCW-dzq29eEm-7pWXZfktRTfA-6om7OrGLMna_sYqXET6VyFf1Yh-GojoVZeucYlsWdMvFXLGAqS7FkL8d48cdepQ2bIHLBt9yJycWhCPLTV4F6oXWpX3_1l/s1600/iPhoto.jpg)
+
+今働いているbtraxのオフィスの近くにはAT＆T Parkというサンフランシスコジャイアンツの本拠地ホームグラウンドがあります。こっちにいる間に一度はメジャーリーグの試合を見に行きたいなと思っていたのですが近くにあるとなかなか行かないもので、、、今日やっとbtraxの仲間と嫁と子供も連れて見に行ってきました。
+
+今日はSFジャイアンツとシンシナティレッズの試合でした。金曜のナイターということで球場は超満員の大盛り上がり！
+
+[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwCVTqAOblN3PSCR9Lph38ns_seicHW613yufy67QvsQ4zLf5xYILTfuud6-C0p4SiZQdkpwBquQG99RE64SaeFiZhvU44qvK5FOXFjPUI3oQ2UrvBeizlJeSArYKYAr-GK5JfPCE7Nrfk/s400/iPhoto-1.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwCVTqAOblN3PSCR9Lph38ns_seicHW613yufy67QvsQ4zLf5xYILTfuud6-C0p4SiZQdkpwBquQG99RE64SaeFiZhvU44qvK5FOXFjPUI3oQ2UrvBeizlJeSArYKYAr-GK5JfPCE7Nrfk/s1600/iPhoto-1.jpg)
+
+[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjF4G78bprGb5W9oWkXHzAPvc-1gT3HINKNAEyF7cr9PsOuVRyIttffQESjxSzykooHHhy5iwhGHUoA9rBQISUZ18yDt1ATiznAUkA9lEtlFGxtfOOerNGQvH0x4mp0r6fq92VMrIisNFqV/s400/iPhoto-2.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjF4G78bprGb5W9oWkXHzAPvc-1gT3HINKNAEyF7cr9PsOuVRyIttffQESjxSzykooHHhy5iwhGHUoA9rBQISUZ18yDt1ATiznAUkA9lEtlFGxtfOOerNGQvH0x4mp0r6fq92VMrIisNFqV/s1600/iPhoto-2.jpg)
+
+当然ホームゲームなのでほぼジャイアンツファン。ブーイングなどのえげつなさはやっぱりすごいですね。これがメジャーか！という感じでした。まあ甲子園球場の阪神ファンも負けてないかもしれませんが。。笑
+
+[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjCOZNkI_E0PL5m5yS9cEp4k7cVuAMJ5fmUlcZLO-q3o8oflgmc5KU3T1P5YX-GXlT501cRUTc8CkOAgkOTZSNl-gBUAgpeEYfX3QJZxYw24LzmAu33PrNkmbdZHb7qL2ilh6nruJl4iapJ/s400/iPhoto-3.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjCOZNkI_E0PL5m5yS9cEp4k7cVuAMJ5fmUlcZLO-q3o8oflgmc5KU3T1P5YX-GXlT501cRUTc8CkOAgkOTZSNl-gBUAgpeEYfX3QJZxYw24LzmAu33PrNkmbdZHb7qL2ilh6nruJl4iapJ/s1600/iPhoto-3.jpg)
+
+[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7Z7Vyvnvf8eSm35UTFT5aGwwM9i2Hfc-gXlETTtJML26Xz4sBC2ZehCmxrtqw2k0GXLt4dNM0hJlLfhWayjk2p69DVwb8Qveq_DEwvZAzGBzBLQ-0hMRzDM438Blv0wCme4rozFLgg14T/s400/iPhoto-4.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7Z7Vyvnvf8eSm35UTFT5aGwwM9i2Hfc-gXlETTtJML26Xz4sBC2ZehCmxrtqw2k0GXLt4dNM0hJlLfhWayjk2p69DVwb8Qveq_DEwvZAzGBzBLQ-0hMRzDM438Blv0wCme4rozFLgg14T/s1600/iPhoto-4.jpg)
+
+[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYg9437fxWomm0HShydGWeObv-VA5sFyqOavMU2lscUDO99BUOZXXBjOAZGdtaS7LXa7bsO6WkhMe-s7A0xcQcVBbISp-Sv8xvKQJO3prwAcYf5Ap6g1VSUKA45jUczvJ4G7emiUF9Dv8C/s400/iPhoto-5.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYg9437fxWomm0HShydGWeObv-VA5sFyqOavMU2lscUDO99BUOZXXBjOAZGdtaS7LXa7bsO6WkhMe-s7A0xcQcVBbISp-Sv8xvKQJO3prwAcYf5Ap6g1VSUKA45jUczvJ4G7emiUF9Dv8C/s1600/iPhoto-5.jpg)
+埋め尽くされるジャイアンツファン
+
+[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgnO6wY4sNmeCafT07fDBd4JepPK58na3yxqgZdWKckN9Vrrqbi362E_wSiMbDY_7ofPT3jIupsrmE0Q_1NW_x5ciFMfj2kvWE6zF5kT13JBNdCTkHSDlbfS7AoGid0jvM-XEWwydVTUlkj/s400/iPhoto-6.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgnO6wY4sNmeCafT07fDBd4JepPK58na3yxqgZdWKckN9Vrrqbi362E_wSiMbDY_7ofPT3jIupsrmE0Q_1NW_x5ciFMfj2kvWE6zF5kT13JBNdCTkHSDlbfS7AoGid0jvM-XEWwydVTUlkj/s1600/iPhoto-6.jpg)
+娘も生後10ヶ月で大リーグが見れるとはなんて贅沢な！
+
+[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyQxN6vRveaNDe-JpPM7GskBSO026O_ZF_SL5D6T2rhPeFqT1hMPMAW_Gxss5f9CMvVS4emQXtxTbg8q1MJT3xmQ5afEnlfalcxnGb82IWs2pNyFV86LbjVvF4FHb9Z1JmbXr_wkOEjdbV/s400/iPhoto-7.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyQxN6vRveaNDe-JpPM7GskBSO026O_ZF_SL5D6T2rhPeFqT1hMPMAW_Gxss5f9CMvVS4emQXtxTbg8q1MJT3xmQ5afEnlfalcxnGb82IWs2pNyFV86LbjVvF4FHb9Z1JmbXr_wkOEjdbV/s1600/iPhoto-7.jpg)
+ホットドッグもデカイ！！
+
+いやーでもメジャーリーグの試合は球場全体がエンターテイメントって感じでイイですね。ファンと選手との距離も近いですし、これは毎日野球を見に行きたくなりますね。
+
+肝心の試合は2-2の同点のまま9回まで行き、9回の裏2アウト満塁という超おもしろい展開からの**Schierholtzのサヨナラヒットでジャイアンツ勝利！**ファンが最も盛り上がる試合展開での勝利で会場はドンちゃん騒ぎでした。
+
+僕らも知らない人たちとハイタッチしまくりみたいなw これがアメリカのいいところですね。会場の一体感と盛り上がりが素晴らしすぎる！
+
+[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEisfkDMaJ86tFugk6tmA4ty_G3j2SFQYyASkAiow4w_cUYeBQ1eSjq0t-3OxDo_QmtCTQAkD8MkXZkS7NWBK2XAFapmuy0PZSxMC4yM0Yc6WKyUf3xx4u3c9sEMNMXAVyyvxHRwZ0mDDFgp/s400/iPhoto-8.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEisfkDMaJ86tFugk6tmA4ty_G3j2SFQYyASkAiow4w_cUYeBQ1eSjq0t-3OxDo_QmtCTQAkD8MkXZkS7NWBK2XAFapmuy0PZSxMC4yM0Yc6WKyUf3xx4u3c9sEMNMXAVyyvxHRwZ0mDDFgp/s1600/iPhoto-8.jpg)
+
+[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigbELT54y-GkbYUYUNSMbm_LA1DhFwSAlff0xwtgw92V6asJPIPG9klf8AMIpLMt5i_Y9EFCkHhHR0wqqmCPYqBzOhV8AwjlxoeaAikYXT7Zjg-j_eT5dj0v6M8A9QxMBaYOUIr-fLsZqm/s400/iPhoto-9.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigbELT54y-GkbYUYUNSMbm_LA1DhFwSAlff0xwtgw92V6asJPIPG9klf8AMIpLMt5i_Y9EFCkHhHR0wqqmCPYqBzOhV8AwjlxoeaAikYXT7Zjg-j_eT5dj0v6M8A9QxMBaYOUIr-fLsZqm/s1600/iPhoto-9.jpg)
+
+最後は会場の横の海から花火が打ち上がるという、最高のゲームでした。まさかアメリカにいる間に花火が見れるなんて思ってもいませんでした。本当に今日のゲーム来て良かったーー！という感じです。
+
+娘の生後10ヶ月の記念日に良い思い出になりました。

@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import TagList from '../../components/TagList.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+  const tags = new Set<string>();
+  for (const post of allPosts) {
+    for (const tag of post.data.tags) {
+      tags.add(tag);
+    }
+  }
+  return [...tags].map(tag => ({
+    params: { tag },
+    props: { tag },
+  }));
+}
+
+const { tag } = Astro.props;
+const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+const filtered = allPosts
+  .filter(post => post.data.tags.includes(tag))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const tagCounts = new Map<string, number>();
+for (const post of allPosts) {
+  for (const t of post.data.tags) {
+    tagCounts.set(t, (tagCounts.get(t) || 0) + 1);
+  }
+}
+---
+
+<BaseLayout title={`#${tag}`} description={`タグ「${tag}」の記事一覧`}>
+  <div class="flex items-center gap-3 mb-2">
+    <h1 class="text-3xl font-bold text-gray-900 dark:text-white">
+      #{tag}
+    </h1>
+    <div class="flex-1 h-px bg-gradient-to-r from-gray-200 dark:from-white/10 to-transparent"></div>
+  </div>
+  <p class="text-gray-400 dark:text-gray-500 font-mono text-sm mb-8">
+    {filtered.length} articles
+  </p>
+
+  <div class="mb-10">
+    <TagList tags={tagCounts} activeTag={tag} />
+  </div>
+
+  <div class="grid gap-4">
+    {filtered.map(post => (
+      <PostCard
+        title={post.data.title}
+        date={post.data.date}
+        description={post.data.description}
+        tags={post.data.tags}
+        slug={post.slug}
+        source={post.data.source}
+      />
+    ))}
+  </div>
+</BaseLayout>

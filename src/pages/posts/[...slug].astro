@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', ({ data }) => !data.draft);
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+const sorted = allPosts.sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
+const currentIndex = sorted.findIndex(p => p.slug === post.slug);
+const prevPost = currentIndex > 0 ? sorted[currentIndex - 1] : null;
+const nextPost = currentIndex < sorted.length - 1 ? sorted[currentIndex + 1] : null;
+
+const formattedDate = post.data.date.toLocaleDateString('ja-JP', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout title={post.data.title} description={post.data.description} image={post.data.image}>
+  <article data-pagefind-body>
+    <header class="mb-10">
+      <div class="flex items-center gap-2.5 mb-4">
+        <time datetime={post.data.date.toISOString()} class="text-sm font-mono text-gray-400 dark:text-gray-500">
+          {formattedDate}
+        </time>
+        {post.data.source && (
+          <span class:list={[
+            'text-xs px-2 py-0.5 rounded-full font-medium',
+            post.data.source === 'blogspot'
+              ? 'bg-orange-100/80 dark:bg-orange-500/10 text-orange-600 dark:text-orange-400 border border-orange-200/50 dark:border-orange-500/20'
+              : 'bg-gp-100/80 dark:bg-neon-sky/10 text-gp-700 dark:text-neon-sky border border-gp-200/50 dark:border-neon-sky/20',
+          ]}>
+            {post.data.source}
+          </span>
+        )}
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-5 leading-tight">
+        {post.data.title}
+      </h1>
+
+      {post.data.tags.length > 0 && (
+        <div class="flex flex-wrap gap-1.5">
+          {post.data.tags.map(tag => (
+            <a
+              href={`/tags/${tag}`}
+              class="text-xs px-2.5 py-1 rounded-lg bg-gray-100/80 dark:bg-white/[0.04] text-gray-500 dark:text-gray-400 border border-gray-200/50 dark:border-white/[0.06] hover:text-gp-600 dark:hover:text-neon-sky hover:border-gp-300 dark:hover:border-neon-sky/30 transition-all duration-200"
+            >
+              #{tag}
+            </a>
+          ))}
+        </div>
+      )}
+
+      <div class="mt-6 h-px bg-gradient-to-r from-neon-sky/50 via-gp-600/50 to-transparent"></div>
+    </header>
+
+    <div class="prose prose-lg dark:prose-invert max-w-none">
+      <Content />
+    </div>
+  </article>
+
+  <script>
+    function openExternalLinksInNewTab() {
+      document.querySelectorAll('.prose a').forEach(link => {
+        const anchor = link as HTMLAnchorElement;
+        if (anchor.hostname && anchor.hostname !== window.location.hostname) {
+          anchor.setAttribute('target', '_blank');
+          anchor.setAttribute('rel', 'noopener noreferrer');
+        }
+      });
+    }
+    openExternalLinksInNewTab();
+    document.addEventListener('astro:after-swap', openExternalLinksInNewTab);
+  </script>
+
+  <!-- Prev/Next navigation -->
+  <nav class="mt-16 pt-8 border-t border-gray-200/50 dark:border-white/[0.06]">
+    <div class="grid sm:grid-cols-2 gap-4">
+      {prevPost && (
+        <a href={`/posts/${prevPost.slug}`} class="group block p-5 rounded-2xl glass gradient-border hover:shadow-glow transition-all duration-300">
+          <span class="text-xs font-mono text-gray-400 dark:text-gray-500">&larr; Prev</span>
+          <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 group-hover:text-gp-600 dark:group-hover:text-neon-sky mt-1.5 transition-colors duration-200">
+            {prevPost.data.title}
+          </p>
+        </a>
+      )}
+      {nextPost && (
+        <a href={`/posts/${nextPost.slug}`} class:list={[
+          'group block p-5 rounded-2xl glass gradient-border hover:shadow-glow transition-all duration-300 text-right',
+          !prevPost && 'sm:col-start-2',
+        ]}>
+          <span class="text-xs font-mono text-gray-400 dark:text-gray-500">Next &rarr;</span>
+          <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 group-hover:text-gp-600 dark:group-hover:text-neon-sky mt-1.5 transition-colors duration-200">
+            {nextPost.data.title}
+          </p>
+        </a>
+      )}
+    </div>
+  </nav>
+</BaseLayout>

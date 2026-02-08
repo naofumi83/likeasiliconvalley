@@ -1,0 +1,45 @@
+---
+title: "第2回JapanNight大盛況でした！"
+date: 2011-06-29
+description: "[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBJ0ySde7mKgVDDNunY9MZOj7YDGO4MY0C4ZtdTm8enCfIctG54Prdbo"
+tags: []
+source: "blogspot"
+---
+
+[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBJ0ySde7mKgVDDNunY9MZOj7YDGO4MY0C4ZtdTm8enCfIctG54PrdbobRIzh7f8xaqAtpNJaUd1oFrPsw9A1ViFN-vJkMpyT8Mw41EnK0jZmRw_LuHwD6TGlZ1PHXYuIovgEPf_wjqrsi/s400/iPhoto.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBJ0ySde7mKgVDDNunY9MZOj7YDGO4MY0C4ZtdTm8enCfIctG54PrdbobRIzh7f8xaqAtpNJaUd1oFrPsw9A1ViFN-vJkMpyT8Mw41EnK0jZmRw_LuHwD6TGlZ1PHXYuIovgEPf_wjqrsi/s1600/iPhoto.jpg)
+
+この3ヶ月のすべてを費やしたイベント第2回SF New Tech Japan Nightが昨日開催されました。
+
+当日サンフランシスコはあいにくの雨で、人が来なかったらどうしようと心配しましたが、結果的にはなんと**SF New Tech 始まって以来過去最大の観客数**だったそうで、大盛況となりました。同時に中継していた**Ustreamも常時300人近くの人に見ていただき合計視聴者数は1500人ちかく**という数で、普段は常時20人くらいしか見てないので素晴らしい結果でした。
+
+JapanNightの出場企業もみなさんも慣れない英語のプレゼンでしたが、とても堂々としたプレゼンで本当に素晴らしかったです。
+
+[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuGOqnlSRFKjQpOhsuCf2AWLaF7hij8KbOKLUh7yEzr78BD8ngQ5vvD4z__GGXFze9rhWYAKM8IQgDULJuXLhNJTTciHEMeHApjec39ZtU6hKzDDaeS11j_Wbrr4105liyxKT1W0plsV-V/s400/iPhoto-1.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuGOqnlSRFKjQpOhsuCf2AWLaF7hij8KbOKLUh7yEzr78BD8ngQ5vvD4z__GGXFze9rhWYAKM8IQgDULJuXLhNJTTciHEMeHApjec39ZtU6hKzDDaeS11j_Wbrr4105liyxKT1W0plsV-V/s1600/iPhoto-1.jpg)
+
+**振り返ってみると**
+
+僕ともう一人のインターンのTeruが4月頭からこの第2回JapanNightの企画運営を任され、来る日も来る日もBrandonさんと3人でアイデアを出しながらディスカッションをしながらイベントの準備を進めて来ました。僕もTeruもイベントの運営というのは初めてだったのでかなり試行錯誤しましたが、JapanNightというイベントを通して様々な方にお会いすることができ、アドバイスを頂いたり、協力を頂いたりすることができました。その甲斐あって、結果的には良い結果を残すイベントとなったと思います。
+
+**JapanNight運営裏話**
+
+思い返せば、今回JapanNightで観客から最も人気の票を集めたFeel on!も最初は4月頭にJapanNightの応募者の募集開始をして応募が集まらなかったときに、僕が横井さんにメールを送ったのが応募のキッカケでした。その時はまだほとんどFeel on!は世に出ていなかったのでサンフランシスコの会社から変なメールが来たので横井さんは何か騙されるのではないかと思ったらしいです。w 
+
+**課題**
+
+良い面もあればやはり課題もはっきり見えるイベントとなりました。一番はやはり英語です。今回もかなり質疑応答が苦戦してましたし、ブランドンさんが通訳に入らないといけない場面が何度もありました。やはり日本側でも英語のプレゼンを出来る場をもっと作る必要性があると感じました。これは日本に帰ってから僕も何か企画したいと思ってます。
+
+[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQ8BXDpA4vdIh8lcT_WIS4I_ZimTCvF5zy5_lEmch403TcqJhavYRSKw6ybZDfocwvN3jalnUOhhpRMZTuIteLs7jdE4Q8rDw-UkGuON3jMUMMzTwFDaL9hBghe3vW1hnfxF0Be7dbI3Hg/s400/iPhoto-2.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQ8BXDpA4vdIh8lcT_WIS4I_ZimTCvF5zy5_lEmch403TcqJhavYRSKw6ybZDfocwvN3jalnUOhhpRMZTuIteLs7jdE4Q8rDw-UkGuON3jMUMMzTwFDaL9hBghe3vW1hnfxF0Be7dbI3Hg/s1600/iPhoto-2.jpg)
+300人を超えるお客さんの数
+[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7bgpCFn49hwWQ5H301ChM8JKf0h9Yhqh-NnaSwD9Za-gBrVMV8bcBQznzkCEhxDUC5rFUzdUn5VLVG8SAgIqmtoLrt1EYHe2OZyE3Y6CXsXmUOAyrXMBIv05AC7raz0m4TtFbIJPCSmmV/s400/iPhoto-3.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh7bgpCFn49hwWQ5H301ChM8JKf0h9Yhqh-NnaSwD9Za-gBrVMV8bcBQznzkCEhxDUC5rFUzdUn5VLVG8SAgIqmtoLrt1EYHe2OZyE3Y6CXsXmUOAyrXMBIv05AC7raz0m4TtFbIJPCSmmV/s1600/iPhoto-3.jpg)
+
+今回3ヶ月間JapanNightの運営をやりながら話を聞いてもらったり、アドバイスをもらったりして出会った人達がみなさんJapanNightに来ていただけたのは本当に感動でした。もちろん、日本人だけではなく現地の人も沢山きてくれました。**結果的にはJapanNightがSF New Tech 過去最高の集客数だったということで、やはりこっちの人もまだまだ日本には何か期待しているということです。**
+
+こっちに来て、日本人がここ10年で少なくなったと聞きますが、まだまだ日本は捨てたもんじゃありません。**改めて今後の日本の可能性を感じる夜**となりました。
+
+JapanNightは秋に第3回が予定されています。僕は日本に帰ってしまいますが、今後もJapanNightというイベントがどんな飛躍を遂げるのか非常に楽しみです！
+
+[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoSLr4YTXFDKb6SxU5-cMg4gLBnNTSVveWXlfm0O92xAfHjBPp_zetFb08Ur_qxSy6b6Zt60dGddwEzp7ADCiAEoxQofy65KqSkwUqoB0F6W05lXQjQaUOFOBS4bzApU0TDFWk1H1JDVhq/s400/iPhoto-4.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoSLr4YTXFDKb6SxU5-cMg4gLBnNTSVveWXlfm0O92xAfHjBPp_zetFb08Ur_qxSy6b6Zt60dGddwEzp7ADCiAEoxQofy65KqSkwUqoB0F6W05lXQjQaUOFOBS4bzApU0TDFWk1H1JDVhq/s1600/iPhoto-4.jpg)
+JapanNight出場者のみなさん
+
+[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwXxM59YYvUbvXmUDzCvtPSwt87TbDUB3XDCiHFYUvAPgbVaAWRocka4l0CQtuS4gAMkem6MknOKr1RgfvG5qKZm0hsDGeIDEaGZphTcHJlRVgl1wHFHiuiHzVo59cuUVWWcni486XWETY/s400/iPhoto-5.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwXxM59YYvUbvXmUDzCvtPSwt87TbDUB3XDCiHFYUvAPgbVaAWRocka4l0CQtuS4gAMkem6MknOKr1RgfvG5qKZm0hsDGeIDEaGZphTcHJlRVgl1wHFHiuiHzVo59cuUVWWcni486XWETY/s1600/iPhoto-5.jpg)
+このメンバーで仕事ができ最高でした！

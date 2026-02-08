@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-[#060d18] dark:text-gray-100 transition-colors duration-300;
+  }
+
+  ::selection {
+    @apply bg-gp-200/60 dark:bg-gp-600/30;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 dark:bg-white/[0.04] backdrop-blur-xl border border-gray-200/50 dark:border-white/[0.06];
+  }
+
+  .glass-heavy {
+    @apply bg-white/90 dark:bg-gray-900/80 backdrop-blur-2xl border border-gray-200/60 dark:border-white/[0.08];
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-neon-sky via-gp-600 to-gp-800;
+  }
+
+  .gradient-border {
+    position: relative;
+  }
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    pointer-events: none;
+    background: linear-gradient(135deg, #5ec5ff, #096FCA, #064e91);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .gradient-border:hover::before {
+    opacity: 1;
+  }
+
+  .glow-dot {
+    @apply relative;
+  }
+  .glow-dot::after {
+    content: '';
+    @apply absolute inset-0 rounded-full;
+    background: inherit;
+    filter: blur(6px);
+    opacity: 0.5;
+  }
+
+  .prose img {
+    @apply rounded-xl shadow-lg;
+  }
+
+  .prose a {
+    @apply text-gp-600 dark:text-neon-sky no-underline border-b border-gp-300/40 dark:border-neon-sky/30 hover:border-gp-600 dark:hover:border-neon-sky transition-colors;
+  }
+
+  .prose code {
+    @apply px-1.5 py-0.5 rounded-md bg-gray-100 dark:bg-white/[0.06] text-sm font-mono;
+  }
+
+  .prose blockquote {
+    @apply border-l-2 border-gp-400 dark:border-gp-600;
+  }
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(9, 111, 202, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(9, 111, 202, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+:root {
+  --pagefind-ui-scale: 1;
+  --pagefind-ui-primary: #096FCA;
+  --pagefind-ui-text: #1f2937;
+  --pagefind-ui-background: #ffffff;
+  --pagefind-ui-border: #e5e7eb;
+  --pagefind-ui-tag: #e5e7eb;
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 12px;
+  --pagefind-ui-font: 'Inter', 'Noto Sans JP', sans-serif;
+}
+
+.dark {
+  --pagefind-ui-primary: #5ec5ff;
+  --pagefind-ui-text: #e5e7eb;
+  --pagefind-ui-background: rgba(255, 255, 255, 0.04);
+  --pagefind-ui-border: rgba(255, 255, 255, 0.08);
+  --pagefind-ui-tag: rgba(255, 255, 255, 0.06);
+}
