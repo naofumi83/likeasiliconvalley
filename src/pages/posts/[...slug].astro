@@ -29,7 +29,7 @@ const formattedDate = post.data.date.toLocaleDateString('ja-JP', {
 
 <BaseLayout title={post.data.title} description={post.data.description} image={post.data.image}>
   <article data-pagefind-body>
-    <header class="mb-10">
+    <header class="mb-6 sm:mb-10">
       <div class="flex items-center gap-2.5 mb-4">
         <time datetime={post.data.date.toISOString()} class="text-sm font-mono text-gray-400 dark:text-gray-500">
           {formattedDate}
@@ -46,7 +46,7 @@ const formattedDate = post.data.date.toLocaleDateString('ja-JP', {
         )}
       </div>
 
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-5 leading-tight">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-4 sm:mb-5 leading-tight">
         {post.data.title}
       </h1>
 
@@ -66,7 +66,7 @@ const formattedDate = post.data.date.toLocaleDateString('ja-JP', {
       <div class="mt-6 h-px bg-gradient-to-r from-neon-sky/50 via-gp-600/50 to-transparent"></div>
     </header>
 
-    <div class="prose prose-lg dark:prose-invert max-w-none">
+    <div class="prose sm:prose-lg dark:prose-invert max-w-none overflow-hidden">
       <Content />
     </div>
   </article>
@@ -86,23 +86,24 @@ const formattedDate = post.data.date.toLocaleDateString('ja-JP', {
   </script>
 
   <!-- Prev/Next navigation -->
-  <nav class="mt-16 pt-8 border-t border-gray-200/50 dark:border-white/[0.06]">
-    <div class="grid sm:grid-cols-2 gap-4">
+  <!-- Prev/Next navigation -->
+  <nav class="mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200/50 dark:border-white/[0.06]">
+    <div class="grid sm:grid-cols-2 gap-3 sm:gap-4">
       {prevPost && (
-        <a href={`/posts/${prevPost.slug}`} class="group block p-5 rounded-2xl glass gradient-border hover:shadow-glow transition-all duration-300">
+        <a href={`/posts/${prevPost.slug}`} class="group block p-4 sm:p-5 rounded-2xl glass gradient-border hover:shadow-glow transition-all duration-300">
           <span class="text-xs font-mono text-gray-400 dark:text-gray-500">&larr; Prev</span>
-          <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 group-hover:text-gp-600 dark:group-hover:text-neon-sky mt-1.5 transition-colors duration-200">
+          <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 group-hover:text-gp-600 dark:group-hover:text-neon-sky mt-1.5 transition-colors duration-200 line-clamp-2">
             {prevPost.data.title}
           </p>
         </a>
       )}
       {nextPost && (
         <a href={`/posts/${nextPost.slug}`} class:list={[
-          'group block p-5 rounded-2xl glass gradient-border hover:shadow-glow transition-all duration-300 text-right',
+          'group block p-4 sm:p-5 rounded-2xl glass gradient-border hover:shadow-glow transition-all duration-300 sm:text-right',
           !prevPost && 'sm:col-start-2',
         ]}>
           <span class="text-xs font-mono text-gray-400 dark:text-gray-500">Next &rarr;</span>
-          <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 group-hover:text-gp-600 dark:group-hover:text-neon-sky mt-1.5 transition-colors duration-200">
+          <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 group-hover:text-gp-600 dark:group-hover:text-neon-sky mt-1.5 transition-colors duration-200 line-clamp-2">
             {nextPost.data.title}
           </p>
         </a>

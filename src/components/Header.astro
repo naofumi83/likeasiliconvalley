@@ -9,12 +9,12 @@ const navItems = [
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="sticky top-0 z-50 glass-heavy">
+<header class="sticky top-0 z-50 glass-heavy border-b border-gray-200/30 dark:border-white/[0.04]">
   <div class="max-w-5xl mx-auto px-4 sm:px-6">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
-      <a href="/" class="flex items-center group">
-        <span class="text-lg font-bold text-gray-900 dark:text-white group-hover:gradient-text transition-all duration-300">
+      <a href="/" class="flex items-center group shrink-0">
+        <span class="text-base sm:text-lg font-bold text-gray-900 dark:text-white group-hover:gradient-text transition-all duration-300">
           Like a Silicon Valley
         </span>
       </a>
@@ -79,7 +79,7 @@ const currentPath = Astro.url.pathname;
     </div>
 
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="hidden sm:hidden pb-4">
+    <div id="mobile-menu" class="hidden sm:hidden pb-4 pt-2 border-t border-gray-200/30 dark:border-white/[0.04]">
       <nav class="flex flex-col gap-0.5">
         {navItems.map(({ label, href }) => (
           <a

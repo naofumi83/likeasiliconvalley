@@ -44,11 +44,11 @@ const totalTags = sortedTags.length;
         href={tagUrl(tag)}
         class="group block glass rounded-2xl p-5 gradient-border hover:shadow-glow dark:hover:shadow-glow transition-all duration-300"
       >
-        <div class="flex items-center justify-between mb-3">
-          <h2 class="text-lg font-bold text-gray-900 dark:text-white group-hover:gradient-text transition-all duration-300">
+        <div class="flex items-center justify-between gap-2 mb-3">
+          <h2 class="text-lg font-bold text-gray-900 dark:text-white group-hover:gradient-text transition-all duration-300 min-w-0 truncate">
             #{tag}
           </h2>
-          <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-gp-100/80 dark:bg-neon-sky/10 text-gp-700 dark:text-neon-sky border border-gp-200/50 dark:border-neon-sky/20">
+          <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-gp-100/80 dark:bg-neon-sky/10 text-gp-700 dark:text-neon-sky border border-gp-200/50 dark:border-neon-sky/20 shrink-0">
             {data.count} articles
           </span>
         </div>

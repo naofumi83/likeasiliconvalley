@@ -19,10 +19,10 @@ const formattedDate = date.toLocaleDateString('ja-JP', {
 });
 ---
 
-<article class="group glass rounded-2xl p-5 sm:p-6 gradient-border hover:shadow-glow dark:hover:shadow-glow transition-all duration-300">
+<article class="group glass rounded-2xl p-4 sm:p-6 gradient-border hover:shadow-glow dark:hover:shadow-glow transition-all duration-300 overflow-hidden">
   <a href={`/posts/${slug}`} class="block">
-    <div class="flex items-center gap-2.5 mb-3">
-      <time datetime={date.toISOString()} class="text-sm font-mono text-gray-400 dark:text-gray-500">
+    <div class="flex items-center gap-2 sm:gap-2.5 mb-2 sm:mb-3">
+      <time datetime={date.toISOString()} class="text-xs sm:text-sm font-mono text-gray-400 dark:text-gray-500 shrink-0">
         {formattedDate}
       </time>
       {source && (
@@ -37,12 +37,12 @@ const formattedDate = date.toLocaleDateString('ja-JP', {
       )}
     </div>
 
-    <h2 class="text-lg font-bold text-gray-900 dark:text-white group-hover:gradient-text transition-all duration-300 mb-2">
+    <h2 class="text-base sm:text-lg font-bold text-gray-900 dark:text-white group-hover:gradient-text transition-all duration-300 mb-2 leading-snug">
       {title}
     </h2>
 
     {description && (
-      <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 mb-4 leading-relaxed">
+      <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 mb-3 sm:mb-4 leading-relaxed">
         {description}
       </p>
     )}

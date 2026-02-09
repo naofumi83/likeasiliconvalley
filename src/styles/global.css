@@ -7,10 +7,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-gray-50 text-gray-900 dark:bg-[#060d18] dark:text-gray-100 transition-colors duration-300;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
   }
 
   ::selection {
@@ -65,18 +68,34 @@
 
   .prose img {
     @apply rounded-xl shadow-lg;
+    max-width: 100%;
+    height: auto;
   }
 
   .prose a {
     @apply text-gp-600 dark:text-neon-sky no-underline border-b border-gp-300/40 dark:border-neon-sky/30 hover:border-gp-600 dark:hover:border-neon-sky transition-colors;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   .prose code {
     @apply px-1.5 py-0.5 rounded-md bg-gray-100 dark:bg-white/[0.06] text-sm font-mono;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .prose pre {
+    @apply overflow-x-auto;
+    max-width: 100%;
   }
 
   .prose blockquote {
     @apply border-l-2 border-gp-400 dark:border-gp-600;
+  }
+
+  .prose {
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 }
 
