@@ -7,35 +7,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     Search
   </h1>
 
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
   <div id="search" class="min-h-[300px]"></div>
 
+  <script is:inline src="/pagefind/pagefind-ui.js"></script>
   <script is:inline>
-    async function loadPagefind() {
-      const el = document.getElementById('search');
+    function initPagefind() {
+      var el = document.getElementById('search');
       if (!el) return;
-
-      try {
-        const pagefind = await import('/pagefind/pagefind-ui.js');
-        new pagefind.PagefindUI({
-          element: '#search',
-          showSubResults: true,
-          showImages: false,
-          translations: {
-            placeholder: '記事を検索...',
-            zero_results: '「[SEARCH_TERM]」に一致する記事はありません',
-            many_results: '[COUNT]件の記事が見つかりました',
-            filters_label: 'フィルター',
-            clear_search: 'クリア',
-          },
-        });
-      } catch (e) {
+      if (typeof window.PagefindUI === 'undefined') {
         el.innerHTML = '<p style="color: #6b7280;">検索機能はビルド後に利用できます。<code>npm run build</code> を実行してください。</p>';
+        return;
       }
+      el.innerHTML = '';
+      new window.PagefindUI({
+        element: '#search',
+        showSubResults: true,
+        showImages: false,
+        translations: {
+          placeholder: '記事を検索...',
+          zero_results: '「[SEARCH_TERM]」に一致する記事はありません',
+          many_results: '[COUNT]件の記事が見つかりました',
+          filters_label: 'フィルター',
+          clear_search: 'クリア',
+        },
+      });
     }
 
-    loadPagefind();
-    document.addEventListener('astro:after-swap', loadPagefind);
+    initPagefind();
+    document.addEventListener('astro:after-swap', initPagefind);
   </script>
-
-  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
 </BaseLayout>
