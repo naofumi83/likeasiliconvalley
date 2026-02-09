@@ -198,50 +198,50 @@ const restArticles = noteArticles.slice(3);
   </div>
 
   <!-- Top 3 -->
-  <div class="space-y-5 mb-6">
+  <div class="space-y-4 mb-6">
     {topArticles.map((article, index) => (
       <a
         href={article.url}
         target="_blank"
         rel="noopener noreferrer"
-        class="group block glass rounded-2xl overflow-hidden gradient-border hover:shadow-glow transition-all duration-300"
+        class="group block glass rounded-2xl p-4 sm:p-5 gradient-border hover:shadow-glow transition-all duration-300 overflow-hidden"
       >
-        <!-- OGP Image -->
-        <div class="aspect-[2/1] sm:aspect-[3/1] overflow-hidden">
-          <img
-            src={article.image}
-            alt={article.title}
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            loading="lazy"
-          />
-        </div>
+        <div class="flex gap-4 sm:gap-5">
+          <!-- OGP Image (square-ish) -->
+          <div class="shrink-0 w-28 h-28 sm:w-40 sm:h-40 rounded-xl overflow-hidden">
+            <img
+              src={article.image}
+              alt={article.title}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
 
-        <!-- Content -->
-        <div class="p-5 sm:p-6">
-          <div class="flex items-start gap-3 sm:gap-4">
+          <!-- Content -->
+          <div class="flex-1 min-w-0 flex flex-col">
             <!-- Rank badge -->
-            <div class:list={[
-              'shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center font-extrabold text-lg sm:text-xl',
-              index === 0 ? 'bg-gradient-to-br from-neon-sky to-gp-600 text-white shadow-glow' : index === 1 ? 'bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300' : 'bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400',
-            ]}>
-              {index + 1}
+            <div class="mb-2">
+              <span class:list={[
+                'inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg font-extrabold text-sm sm:text-base',
+                index === 0 ? 'bg-gradient-to-br from-neon-sky to-gp-600 text-white shadow-glow' : index === 1 ? 'bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300' : 'bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400',
+              ]}>
+                {index + 1}
+              </span>
             </div>
 
-            <div class="flex-1 min-w-0">
-              <h2 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white group-hover:gradient-text transition-all duration-300 mb-2 leading-snug">
-                {article.title}
-              </h2>
-              <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 mb-3 leading-relaxed">
-                {article.excerpt}
-              </p>
-              <div class="flex items-center gap-1.5 text-sm">
-                <svg class="w-4 h-4 text-red-400" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                </svg>
-                <span class="font-bold text-gray-700 dark:text-gray-300 tabular-nums">
-                  {article.likes.toLocaleString()}
-                </span>
-              </div>
+            <h2 class="text-base sm:text-lg font-bold text-gray-900 dark:text-white group-hover:gradient-text transition-all duration-300 mb-1.5 leading-snug line-clamp-2">
+              {article.title}
+            </h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 mb-2 leading-relaxed hidden sm:block">
+              {article.excerpt}
+            </p>
+            <div class="flex items-center gap-1.5 text-sm mt-auto">
+              <svg class="w-4 h-4 text-red-400" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+              <span class="font-bold text-gray-700 dark:text-gray-300 tabular-nums">
+                {article.likes.toLocaleString()}
+              </span>
             </div>
           </div>
         </div>
