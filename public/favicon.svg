@@ -1,11 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#5ec5ff"/>
-      <stop offset="50%" style="stop-color:#096FCA"/>
-      <stop offset="100%" style="stop-color:#064a87"/>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="40%" style="stop-color:#fb923c"/>
+      <stop offset="100%" style="stop-color:#fbbf24"/>
     </linearGradient>
   </defs>
-  <rect width="100" height="100" rx="20" fill="url(#g)"/>
-  <text x="50" y="66" text-anchor="middle" fill="white" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800" letter-spacing="-2">SV</text>
+  <!-- Sunset sky background -->
+  <rect width="100" height="100" rx="18" fill="url(#sky)"/>
+  <!-- Water -->
+  <rect y="62" width="100" height="38" rx="0" fill="#1e3a5f" opacity="0.5"/>
+  <rect y="62" width="100" height="38" rx="0" ry="18" fill="#1e3a5f" opacity="0.3"/>
+  <!-- Bridge towers -->
+  <rect x="25" y="22" width="6" height="48" rx="1.5" fill="#c2410c"/>
+  <rect x="69" y="22" width="6" height="48" rx="1.5" fill="#c2410c"/>
+  <!-- Tower tops -->
+  <rect x="23.5" y="20" width="9" height="5" rx="1.5" fill="#c2410c"/>
+  <rect x="67.5" y="20" width="9" height="5" rx="1.5" fill="#c2410c"/>
+  <!-- Bridge deck -->
+  <rect x="8" y="52" width="84" height="4" rx="2" fill="#c2410c"/>
+  <!-- Main cables (catenary curves) -->
+  <path d="M28 22 Q50 42 72 22" fill="none" stroke="#c2410c" stroke-width="2"/>
+  <path d="M8 54 Q28 38 28 22" fill="none" stroke="#c2410c" stroke-width="1.5" opacity="0.8"/>
+  <path d="M72 22 Q72 38 92 54" fill="none" stroke="#c2410c" stroke-width="1.5" opacity="0.8"/>
+  <!-- Vertical suspender cables -->
+  <line x1="34" y1="28" x2="34" y2="52" stroke="#c2410c" stroke-width="0.8" opacity="0.6"/>
+  <line x1="40" y1="32" x2="40" y2="52" stroke="#c2410c" stroke-width="0.8" opacity="0.6"/>
+  <line x1="46" y1="36" x2="46" y2="52" stroke="#c2410c" stroke-width="0.8" opacity="0.6"/>
+  <line x1="50" y1="38" x2="50" y2="52" stroke="#c2410c" stroke-width="0.8" opacity="0.6"/>
+  <line x1="54" y1="36" x2="54" y2="52" stroke="#c2410c" stroke-width="0.8" opacity="0.6"/>
+  <line x1="60" y1="32" x2="60" y2="52" stroke="#c2410c" stroke-width="0.8" opacity="0.6"/>
+  <line x1="66" y1="28" x2="66" y2="52" stroke="#c2410c" stroke-width="0.8" opacity="0.6"/>
+  <!-- Sun -->
+  <circle cx="50" cy="62" r="10" fill="#fde68a" opacity="0.8"/>
+  <!-- Water reflection -->
+  <line x1="30" y1="72" x2="70" y2="72" stroke="#fde68a" stroke-width="1" opacity="0.4"/>
+  <line x1="35" y1="76" x2="65" y2="76" stroke="#fde68a" stroke-width="0.8" opacity="0.3"/>
+  <line x1="40" y1="80" x2="60" y2="80" stroke="#fde68a" stroke-width="0.6" opacity="0.2"/>
 </svg>
