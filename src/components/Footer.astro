@@ -3,8 +3,52 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="border-t border-gray-200/50 dark:border-white/[0.06] bg-white/50 dark:bg-white/[0.02]">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10">
-    <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <!-- Author Profile Section -->
+    <div class="py-8 sm:py-10 border-b border-gray-200/50 dark:border-white/[0.06]">
+      <div class="flex items-start sm:items-center gap-4 sm:gap-5">
+        <!-- Profile Image -->
+        <a href="https://x.com/tsuchinao83" target="_blank" rel="noopener noreferrer" class="shrink-0">
+          <img
+            src="/images/tsuchinao83.jpg"
+            alt="土屋尚史"
+            class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-gray-200/50 dark:border-white/[0.1] hover:border-gp-400 dark:hover:border-neon-sky transition-colors duration-200"
+            loading="lazy"
+          />
+        </a>
+
+        <!-- Info -->
+        <div class="flex-1 min-w-0">
+          <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-1.5">
+            <div>
+              <h3 class="text-base font-bold text-gray-900 dark:text-white leading-tight">
+                土屋尚史
+              </h3>
+              <p class="text-xs text-gray-400 dark:text-gray-500 font-mono mt-0.5">
+                @tsuchinao83
+              </p>
+            </div>
+            <a
+              href="https://x.com/tsuchinao83"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-xs font-bold hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors w-fit"
+            >
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+              Follow
+            </a>
+          </div>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+            Goodpatch Inc. Founder & CEO。デザインカンパニー <a href="https://goodpatch.com" target="_blank" rel="noopener noreferrer" class="text-gp-600 dark:text-neon-sky hover:underline">Goodpatch</a> 創業者。東証グロース上場（7351）。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <div class="w-6 h-6 rounded-md bg-gradient-to-br from-neon-sky via-gp-600 to-gp-800 flex items-center justify-center">
           <span class="text-[8px] font-bold text-white">SV</span>

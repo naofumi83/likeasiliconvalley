@@ -25,6 +25,11 @@ const formattedDate = post.data.date.toLocaleDateString('ja-JP', {
   month: 'long',
   day: 'numeric',
 });
+
+const siteUrl = 'https://likeasiliconvalley.com';
+const postUrl = `${siteUrl}/posts/${post.slug}`;
+const shareText = `${post.data.title} | Like a Silicon Valley`;
+const xShareUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(postUrl)}`;
 ---
 
 <BaseLayout title={post.data.title} description={post.data.description} image={post.data.image}>
@@ -85,9 +90,25 @@ const formattedDate = post.data.date.toLocaleDateString('ja-JP', {
     document.addEventListener('astro:after-swap', openExternalLinksInNewTab);
   </script>
 
+  <!-- Share -->
+  <div class="mt-10 sm:mt-14 flex items-center justify-center gap-3">
+    <div class="flex-1 h-px bg-gradient-to-r from-transparent to-gray-200 dark:to-white/10"></div>
+    <a
+      href={xShareUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold text-sm hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+    >
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+      </svg>
+      Share on X
+    </a>
+    <div class="flex-1 h-px bg-gradient-to-l from-transparent to-gray-200 dark:to-white/10"></div>
+  </div>
+
   <!-- Prev/Next navigation -->
-  <!-- Prev/Next navigation -->
-  <nav class="mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200/50 dark:border-white/[0.06]">
+  <nav class="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-gray-200/50 dark:border-white/[0.06]">
     <div class="grid sm:grid-cols-2 gap-3 sm:gap-4">
       {prevPost && (
         <a href={`/posts/${prevPost.slug}`} class="group block p-4 sm:p-5 rounded-2xl glass gradient-border hover:shadow-glow transition-all duration-300">
