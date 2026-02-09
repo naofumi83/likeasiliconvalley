@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { tagUrl } from '../../utils/tags';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts', ({ data }) => !data.draft);
@@ -53,7 +54,7 @@ const formattedDate = post.data.date.toLocaleDateString('ja-JP', {
         <div class="flex flex-wrap gap-1.5">
           {post.data.tags.map(tag => (
             <a
-              href={`/tags/${tag}`}
+              href={tagUrl(tag)}
               class="text-xs px-2.5 py-1 rounded-lg bg-gray-100/80 dark:bg-white/[0.04] text-gray-500 dark:text-gray-400 border border-gray-200/50 dark:border-white/[0.06] hover:text-gp-600 dark:hover:text-neon-sky hover:border-gp-300 dark:hover:border-neon-sky/30 transition-all duration-200"
             >
               #{tag}

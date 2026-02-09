@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/PostCard.astro';
 import { getCollection } from 'astro:content';
+import { tagToSlug, tagUrl } from '../../utils/tags';
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('posts', ({ data }) => !data.draft);
@@ -12,15 +13,15 @@ export async function getStaticPaths() {
     }
   }
   return [...tags].map(tag => ({
-    params: { tag },
-    props: { tag },
+    params: { tag: tagToSlug(tag) },
+    props: { tagName: tag },
   }));
 }
 
-const { tag } = Astro.props;
+const { tagName } = Astro.props;
 const allPosts = await getCollection('posts', ({ data }) => !data.draft);
 const filtered = allPosts
-  .filter(post => post.data.tags.includes(tag))
+  .filter(post => post.data.tags.includes(tagName))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 // Group filtered posts by year
@@ -50,7 +51,7 @@ const yearRange = oldest && newest
   : '';
 ---
 
-<BaseLayout title={`#${tag}`} description={`Like a Silicon Valley - 「${tag}」に関する記事一覧`}>
+<BaseLayout title={`#${tagName}`} description={`Like a Silicon Valley - 「${tagName}」に関する記事一覧`}>
   <!-- Header -->
   <div class="mb-8">
     <a href="/tags" class="inline-flex items-center gap-1 text-sm text-gray-400 dark:text-gray-500 hover:text-gp-600 dark:hover:text-neon-sky transition-colors mb-4">
@@ -62,7 +63,7 @@ const yearRange = oldest && newest
 
     <div class="flex items-center gap-3 mb-2">
       <h1 class="text-3xl font-bold text-gray-900 dark:text-white">
-        #{tag}
+        #{tagName}
       </h1>
       <div class="flex-1 h-px bg-gradient-to-r from-gray-200 dark:from-white/10 to-transparent"></div>
     </div>
@@ -83,10 +84,10 @@ const yearRange = oldest && newest
     <div class="flex gap-2 pb-2">
       {sortedTags.map(([t, count]) => (
         <a
-          href={`/tags/${t}`}
+          href={tagUrl(t)}
           class:list={[
             'inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap shrink-0',
-            t === tag
+            t === tagName
               ? 'bg-gradient-to-r from-neon-sky to-gp-600 text-white shadow-glow'
               : 'glass hover:shadow-glow text-gray-700 dark:text-gray-300 hover:text-gp-600 dark:hover:text-neon-sky',
           ]}
@@ -94,7 +95,7 @@ const yearRange = oldest && newest
           #{t}
           <span class:list={[
             'text-xs',
-            t === tag ? 'text-white/70' : 'text-gray-400 dark:text-gray-500',
+            t === tagName ? 'text-white/70' : 'text-gray-400 dark:text-gray-500',
           ]}>
             ({count})
           </span>

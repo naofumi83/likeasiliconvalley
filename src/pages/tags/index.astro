@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { tagUrl } from '../../utils/tags';
 
 const allPosts = await getCollection('posts', ({ data }) => !data.draft);
 const sorted = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
@@ -40,7 +41,7 @@ const totalTags = sortedTags.length;
   <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
     {sortedTags.map(([tag, data]) => (
       <a
-        href={`/tags/${tag}`}
+        href={tagUrl(tag)}
         class="group block glass rounded-2xl p-5 gradient-border hover:shadow-glow dark:hover:shadow-glow transition-all duration-300"
       >
         <div class="flex items-center justify-between mb-3">

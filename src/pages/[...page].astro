@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
 import Pagination from '../components/Pagination.astro';
 import { getCollection } from 'astro:content';
+import { tagUrl } from '../utils/tags';
 
 export const getStaticPaths = (async ({ paginate }) => {
   const allPosts = await getCollection('posts', ({ data }) => !data.draft);
@@ -101,7 +102,7 @@ const totalPosts = allPosts.length;
         <div class="flex flex-wrap gap-2">
           {topTags.map(([tag, count]) => (
             <a
-              href={`/tags/${tag}`}
+              href={tagUrl(tag)}
               class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm font-medium glass hover:shadow-glow dark:hover:shadow-glow transition-all duration-300"
             >
               <span class="text-gray-700 dark:text-gray-300">#{tag}</span>
