@@ -1,0 +1,227 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const noteArticles = [
+  {
+    title: 'カルチャー崩壊と再構築。 Goodpatchが取り組んだ組織デザインの2年間 - 前編',
+    url: 'https://note.com/naofumit/n/n028df2984256',
+    likes: 1884,
+    excerpt: '会社組織を運営していく上で企業文化の重要性は多くの経営者が理解している事かと思います。Goodpatchの組織とカルチャーが崩壊し、そこからどう再構築していったのかを描くストーリーの前編です。',
+  },
+  {
+    title: 'Whyとは何か？を言語化してみる',
+    url: 'https://note.com/naofumit/n/n1aaab6683818',
+    likes: 1679,
+    excerpt: '近年、多くの会社で聞かれるようになった「Why」の重要性。Goodpatchも例に漏れず、会社のカルチャーの根底に「Why」があります。Whyとは一体何なのかを言語化してみました。',
+  },
+  {
+    title: 'カルチャー崩壊と再構築。 Goodpatchが取り組んだ組織デザインの2年間 - 後編',
+    url: 'https://note.com/naofumit/n/na27fc54d1d68',
+    likes: 1201,
+    excerpt: 'Goodpatchの組織とカルチャー崩壊からの再構築までのストーリー後編。流れを変えた17年新卒カツキのプレゼンなど、組織が再生していく過程を描いています。',
+  },
+  {
+    title: 'Goodpatchがクライアントワークを続ける理由',
+    url: 'https://note.com/naofumit/n/n6fb139c95bbc',
+    likes: 911,
+    excerpt: 'あるイベントで対談した若手スタートアップ起業家から「なぜ投資を受けたのにクライアントワークを続けるのか？」と質問されたことをきっかけに、Goodpatchがクライアントワークにこだわる理由を語ります。',
+  },
+  {
+    title: '青い想いを忘れない。意志が繋いだグッドパッチ上場ストーリー',
+    url: 'https://note.com/naofumit/n/n93e5b202c136',
+    likes: 862,
+    excerpt: '2020年6月30日、株式会社グッドパッチは東証マザーズに上場しました。証券コード7351。創業からの想いと意志が繋いだ上場までのストーリーです。',
+  },
+  {
+    title: 'Goodpatchの成長に結びついた一見すると非合理な8の戦略',
+    url: 'https://note.com/naofumit/n/n1c15752c683a',
+    likes: 850,
+    excerpt: '世の中の成功企業の中には、一見すると常人には理解できない非合理な選択を取ったにも関わらず成長を勝ち取り世界的な企業に成長する事例が沢山あります。Goodpatchが取った8つの非合理な戦略とは。',
+  },
+  {
+    title: '世界最先端AI企業 OpenAIのデザイナーに求められる「曖昧さへの耐性」',
+    url: 'https://note.com/naofumit/n/n8e4afd8933d1',
+    likes: 612,
+    excerpt: '世界の最先端AI企業であるOpenAIに入社してみたいと思ったことありませんか？OpenAIのデザイナーの求人から見えてくる、AI時代のデザイナーに求められる資質について考察します。',
+  },
+  {
+    title: '病気になってからちょうど20年',
+    url: 'https://note.com/naofumit/n/n76a8801eeaee',
+    likes: 530,
+    excerpt: '21歳の時に病気になってからちょうど20年。毎年アドベントカレンダーで徹夜でブログを書く恒例行事の中で、病気と向き合ってきた20年間を振り返ります。',
+  },
+  {
+    title: '佐久間さんHP作らせてください企画の裏側',
+    url: 'https://note.com/naofumit/n/n7976e5c95368',
+    likes: 483,
+    excerpt: 'またしてもこの季節が来てしまいました。毎年12月24日に徹夜でブログを書くというのが恒例行事。佐久間さんのHP制作企画の裏側を語ります。',
+  },
+  {
+    title: '経営に入り込むデザインリーダーになるための示唆を与えるかもしれないnote',
+    url: 'https://note.com/naofumit/n/nf2efb661b016',
+    likes: 320,
+    excerpt: 'Design Leader Impact Award（DLIA）にちなんだ話。経営に入り込むデザインリーダーになるために必要なことについて、自身の経験をもとに語ります。',
+  },
+  {
+    title: 'グッドパッチ上場して1年の7つの変化',
+    url: 'https://note.com/naofumit/n/n5b2149310247',
+    likes: 293,
+    excerpt: '6月30日は昨年グッドパッチが東証マザーズに上場した日。上場してちょうど1年が経ち、会社と自分に起きた7つの変化を振り返ります。',
+  },
+  {
+    title: 'グッドパッチ10周年プロジェクトと起業して10年を振り返る',
+    url: 'https://note.com/naofumit/n/ne76e5def576d',
+    likes: 256,
+    excerpt: 'グッドパッチは2021年9月1日で創業10年が経ちました。10年前にグッドパッチを起業したときにはまさか自分がここまで来るとは想像もしていませんでした。',
+  },
+  {
+    title: '未来を切り拓くデザイナーに求められるアントレプレナーシップとは',
+    url: 'https://note.com/naofumit/n/n55fc4707c356',
+    likes: 221,
+    excerpt: '毎年この時期になるとアドベントカレンダーでクリスマスがほぼ徹夜になるグッドパッチ土屋が、デザイナーに求められるアントレプレナーシップ（起業家精神）について語ります。',
+  },
+  {
+    title: '2019年を振り返る。 崩壊の先。',
+    url: 'https://note.com/naofumit/n/n120c7c8a0758',
+    likes: 201,
+    excerpt: '2019年という年は自分的に思い入れの深い年。起業して8年、組織や人事の課題に向き合い続けた2019年に感じたことを記録として書き残します。',
+  },
+  {
+    title: '高校時代の思い出',
+    url: 'https://note.com/naofumit/n/ndc8932179856',
+    likes: 166,
+    excerpt: 'もう20年近く前になる高校時代の話。長野県立野沢北高校は普通の公立高校ながら、LINEの出澤社長など著名な卒業生を輩出した学校での思い出を語ります。',
+  },
+  {
+    title: 'Goodpatchを作って7年を価値観で振り返る',
+    url: 'https://note.com/naofumit/n/nfb20ccaae7b1',
+    likes: 155,
+    excerpt: 'Goodpatch UI Design Advent Calendar 2018の最終日の記事。少しポエム的な内容で、Goodpatchを作って7年間の価値観の変遷を振り返ります。',
+  },
+  {
+    title: 'Goodpatchの新プロダクトStrapに秘められた苦悩の3年間のストーリー',
+    url: 'https://note.com/naofumit/n/n4ecb68276fd3',
+    likes: 152,
+    excerpt: 'Goodpatchから久しぶりの新プロダクトStrapのβ版登録開始がリリース。リモートコラボレーションの可能性を広げるクラウドワークスペースの開発に秘められた3年間の苦悩を語ります。',
+  },
+  {
+    title: '経営者も顧客視点を忘れないためのクライアントインタビューのすゝめ',
+    url: 'https://note.com/naofumit/n/nee4cea24cf5d',
+    likes: 130,
+    excerpt: 'Goodpatch Design Advent Calendar 2022の最終日。CEOである自分がクライアントインタビューを実践し続けることの重要性について書きます。',
+  },
+  {
+    title: 'デザインとAIの未来を共に描く──Layermate子会社化に込めた想い',
+    url: 'https://note.com/naofumit/n/nc03e9039ac0b',
+    likes: 126,
+    excerpt: 'AIデザインツールの「Layermate」を買収し、子会社化することを発表しました。デザインとAIの未来を共に描くための決断に込めた想いを語ります。',
+  },
+  {
+    title: 'デザインの力を証明するために',
+    url: 'https://note.com/naofumit/n/n86530e4fec30',
+    likes: 124,
+    excerpt: 'かつて、日本においてデザインに対してこんなに追い風が吹いている事はあったのでしょうか。ビジネスシーンにおけるデザインの重要度が急激に上がってきている今、デザインの力を証明するために。',
+  },
+  {
+    title: '世界を前進させる挑戦者へ送る。Goodpatchのブランドムービーに込めた想い。',
+    url: 'https://note.com/naofumit/n/n8be1dd874733',
+    likes: 122,
+    excerpt: 'Design to empower all challengers。Goodpatchとして初めてのブランドムービーを公開。不確実な時代に強い意志を持つ挑戦者へのメッセージを込めました。',
+  },
+  {
+    title: 'デザイナーがいないスタートアップを支援します。',
+    url: 'https://note.com/naofumit/n/nab2b424fb3a2',
+    likes: 100,
+    excerpt: 'グッドパッチを創業して6年半。日本のスタートアップシーンは本当に起業家にとって良い環境になりました。デザイナーがいないスタートアップを支援する取り組みを始めます。',
+  },
+  {
+    title: '逆境を糧に進化するアンチフラジャイルな組織とは',
+    url: 'https://note.com/naofumit/n/n9f818e1f0ad6',
+    likes: 81,
+    excerpt: '9月に入り、グッドパッチは15期に突入。営業利益マイナス93%の下方修正を出した前期からの復活。逆境を糧に進化するアンチフラジャイルな組織について考えます。',
+  },
+  {
+    title: 'HR・組織領域を支援するピープルアンドデザインを設立しました',
+    url: 'https://note.com/naofumit/n/n4dc1f97608df',
+    likes: 77,
+    excerpt: 'グッドパッチの新たなHR支援領域の子会社「株式会社ピープルアンドデザイン」の設立を発表しました。組織デザインの経験を活かした新たな挑戦です。',
+  },
+  {
+    title: 'デザインを支援するスタートアップが決まりました。',
+    url: 'https://note.com/naofumit/n/n5ab5873e8ffe',
+    likes: 27,
+    excerpt: '「デザイナーがいないスタートアップを支援します」企画の進捗。2週間で60社の応募が集まり、支援するスタートアップが決まりました。',
+  },
+];
+---
+
+<BaseLayout title="note" description="土屋尚史のnote記事をハート数順にランキング。経営、デザイン、組織づくりについて発信しています。">
+  <!-- Header -->
+  <div class="mb-8">
+    <div class="flex items-center gap-3 mb-2">
+      <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+        note
+      </h1>
+      <div class="flex-1 h-px bg-gradient-to-r from-gray-200 dark:from-white/10 to-transparent"></div>
+    </div>
+    <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+      土屋尚史の<a href="https://note.com/naofumit" target="_blank" rel="noopener noreferrer" class="text-gp-600 dark:text-neon-sky hover:underline">note</a>の記事をハート数の多い順にランキングしています。（全{noteArticles.length}記事）
+    </p>
+  </div>
+
+  <!-- Ranking -->
+  <div class="space-y-4">
+    {noteArticles.map((article, index) => (
+      <a
+        href={article.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group block glass rounded-2xl p-4 sm:p-5 gradient-border hover:shadow-glow transition-all duration-300 overflow-hidden"
+      >
+        <div class="flex gap-3 sm:gap-4">
+          <!-- Rank -->
+          <div class="shrink-0 flex flex-col items-center justify-start pt-0.5">
+            <span class:list={[
+              'text-lg sm:text-xl font-extrabold tabular-nums',
+              index === 0 ? 'gradient-text' : index === 1 ? 'text-gray-400 dark:text-gray-400' : index === 2 ? 'text-amber-600 dark:text-amber-500' : 'text-gray-300 dark:text-gray-600',
+            ]}>
+              {index + 1}
+            </span>
+          </div>
+
+          <!-- Content -->
+          <div class="flex-1 min-w-0">
+            <h2 class="text-base sm:text-lg font-bold text-gray-900 dark:text-white group-hover:gradient-text transition-all duration-300 mb-1.5 leading-snug">
+              {article.title}
+            </h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 mb-2 leading-relaxed">
+              {article.excerpt}
+            </p>
+            <div class="flex items-center gap-1.5 text-sm">
+              <svg class="w-4 h-4 text-red-400" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+              <span class="font-bold text-gray-700 dark:text-gray-300 tabular-nums">
+                {article.likes.toLocaleString()}
+              </span>
+            </div>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- CTA -->
+  <div class="mt-10 sm:mt-14 flex items-center justify-center gap-3">
+    <div class="flex-1 h-px bg-gradient-to-r from-transparent to-gray-200 dark:to-white/10"></div>
+    <a
+      href="https://note.com/naofumit"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold text-sm hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
+    >
+      noteをフォロー
+    </a>
+    <div class="flex-1 h-px bg-gradient-to-l from-transparent to-gray-200 dark:to-white/10"></div>
+  </div>
+</BaseLayout>
