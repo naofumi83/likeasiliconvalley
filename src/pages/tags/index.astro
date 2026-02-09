@@ -1,25 +1,88 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import TagList from '../../components/TagList.astro';
 import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+const sorted = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
-const tagCounts = new Map<string, number>();
-for (const post of allPosts) {
+// Build tag data: count + latest posts per tag
+const tagData = new Map<string, { count: number; latestPosts: typeof sorted }>();
+for (const post of sorted) {
   for (const tag of post.data.tags) {
-    tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+    if (!tagData.has(tag)) {
+      tagData.set(tag, { count: 0, latestPosts: [] });
+    }
+    const data = tagData.get(tag)!;
+    data.count++;
+    if (data.latestPosts.length < 3) {
+      data.latestPosts.push(post);
+    }
   }
 }
+
+const sortedTags = [...tagData.entries()].sort((a, b) => b[1].count - a[1].count);
+const totalTags = sortedTags.length;
 ---
 
 <BaseLayout title="Tags" description="Like a Silicon Valley - タグ一覧。起業、デザイン、テクノロジーなどカテゴリ別に記事を探す">
-  <div class="flex items-center gap-3 mb-10">
+  <div class="flex items-center gap-3 mb-4">
     <h1 class="text-3xl font-bold text-gray-900 dark:text-white">
       Tags
     </h1>
     <div class="flex-1 h-px bg-gradient-to-r from-gray-200 dark:from-white/10 to-transparent"></div>
   </div>
 
-  <TagList tags={tagCounts} />
+  <p class="text-gray-400 dark:text-gray-500 font-mono text-sm mb-10">
+    {totalTags} tags
+  </p>
+
+  <!-- Tag Cards Grid -->
+  <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    {sortedTags.map(([tag, data]) => (
+      <a
+        href={`/tags/${tag}`}
+        class="group block glass rounded-2xl p-5 gradient-border hover:shadow-glow dark:hover:shadow-glow transition-all duration-300"
+      >
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="text-lg font-bold text-gray-900 dark:text-white group-hover:gradient-text transition-all duration-300">
+            #{tag}
+          </h2>
+          <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-gp-100/80 dark:bg-neon-sky/10 text-gp-700 dark:text-neon-sky border border-gp-200/50 dark:border-neon-sky/20">
+            {data.count} articles
+          </span>
+        </div>
+
+        <!-- Progress bar showing relative tag size -->
+        <div class="w-full h-1 rounded-full bg-gray-100 dark:bg-white/[0.04] mb-4 overflow-hidden">
+          <div
+            class="h-full rounded-full bg-gradient-to-r from-neon-sky to-gp-600 transition-all duration-500"
+            style={`width: ${Math.max((data.count / sortedTags[0][1].count) * 100, 8)}%`}
+          />
+        </div>
+
+        <!-- Latest posts preview -->
+        <ul class="space-y-1.5">
+          {data.latestPosts.map(post => (
+            <li class="flex items-baseline gap-2 text-sm">
+              <time
+                datetime={post.data.date.toISOString()}
+                class="text-xs text-gray-400 dark:text-gray-600 font-mono shrink-0 tabular-nums"
+              >
+                {post.data.date.toLocaleDateString('ja-JP', { year: '2-digit', month: '2-digit' })}
+              </time>
+              <span class="text-gray-600 dark:text-gray-400 truncate">
+                {post.data.title}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+        {data.count > 3 && (
+          <p class="text-xs text-gray-400 dark:text-gray-500 mt-2">
+            + {data.count - 3} more
+          </p>
+        )}
+      </a>
+    ))}
+  </div>
 </BaseLayout>
