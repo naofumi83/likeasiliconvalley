@@ -16,7 +16,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="flex flex-col sm:flex-row gap-6 items-start">
       <div class="shrink-0 w-24 h-24 sm:w-32 sm:h-32 rounded-2xl overflow-hidden shadow-lg">
         <img
-          src="https://assets.st-note.com/production/uploads/images/4015733/profile_bcb64900e77edce3d9e18e498fed45af.jpeg"
+          src="https://assets.st-note.com/production/uploads/images/13597/profile_37fd79e7df0e8fddaed20e668f3b7be4.jpg?fit=bounds&format=jpeg&quality=85&width=330"
           alt="土屋尚史"
           class="w-full h-full object-cover"
         />
@@ -101,6 +101,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mt-0.5">フルリモートデザインチーム「Goodpatch Anywhere」をリリース</p>
       </div>
       <div class="relative pb-6">
+        <span class="absolute -left-[calc(1.5rem+5px)] top-1.5 w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+        <time class="text-xs font-mono text-gray-400 dark:text-gray-500">2018年</time>
+        <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mt-0.5">デザイナー特化型キャリア支援サービス「ReDesigner」をリリース</p>
+      </div>
+      <div class="relative pb-6">
         <span class="absolute -left-[calc(1.5rem+5px)] top-1.5 w-2.5 h-2.5 rounded-full bg-gradient-to-b from-neon-sky to-gp-600 shadow-glow"></span>
         <time class="text-xs font-mono text-gp-600 dark:text-neon-sky font-semibold">2020年6月</time>
         <p class="text-sm sm:text-base text-gray-900 dark:text-white font-semibold mt-0.5">デザイン会社として初の東証マザーズ上場（証券コード:7351）</p>
@@ -130,6 +135,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       趣味・好きなもの
     </h2>
     <div class="grid gap-4 sm:grid-cols-2">
+      <!-- 新しいWebサービス -->
+      <div class="glass rounded-2xl p-5 gradient-border">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-xl">🌐</span>
+          <h3 class="font-bold text-gray-900 dark:text-white">新しいWebサービス</h3>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          新しいサービスは一旦使ってみる派。気になったWebサービスやアプリはとりあえず触ってみる。
+        </p>
+      </div>
+
+      <!-- Twitter -->
+      <div class="glass rounded-2xl p-5 gradient-border">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-xl">🐦</span>
+          <h3 class="font-bold text-gray-900 dark:text-white">Twitter（X）</h3>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          生粋のツイ廃。未だにXのことをTwitter、ポストをツイートと呼ぶ。
+        </p>
+      </div>
+
+      <!-- 恋リア・連続ドラマ -->
+      <div class="glass rounded-2xl p-5 gradient-border">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-xl">📺</span>
+          <h3 class="font-bold text-gray-900 dark:text-white">恋リア・連続ドラマ</h3>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          あいのりから始まり、テラハや昨今の恋愛リアリティショーは一通り見ている。ドラマはかなり見る方で、過去DVDを持っているほど好きなドラマは未成年、IWGP、リーガルハイ、踊る大捜査線、リッチマン・プアウーマン、SPECなど。
+        </p>
+      </div>
+
       <!-- 映画 -->
       <div class="glass rounded-2xl p-5 gradient-border">
         <div class="flex items-center gap-2 mb-2">
@@ -138,6 +176,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
           Pixar作品の大ファン。グッドパッチの会議室はPixarキャラクターの名前が付けられている。特にトイ・ストーリー3が好き。
+        </p>
+      </div>
+
+      <!-- 漫画 -->
+      <div class="glass rounded-2xl p-5 gradient-border">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-xl">📚</span>
+          <h3 class="font-bold text-gray-900 dark:text-white">漫画</h3>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          ジャンプ黄金時代の漫画は大体読んでいる。定期的に読み返すのはスラムダンク、キングダム、ヒロアカ、デスノート、進撃の巨人あたり。左ききのエレンには漫画に登場しています。
         </p>
       </div>
 
@@ -151,62 +200,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           小学校から野球に打ち込む。あだち充の「H2」「タッチ」など高校野球漫画が好き。
         </p>
       </div>
-
-      <!-- デザイン -->
-      <div class="glass rounded-2xl p-5 gradient-border">
-        <div class="flex items-center gap-2 mb-2">
-          <span class="text-xl">🎨</span>
-          <h3 class="font-bold text-gray-900 dark:text-white">デザイン</h3>
-        </div>
-        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-          UI/UXデザインへの強いこだわり。「デザインの力を証明する」をミッションに、ビジネスとデザインの融合を追求し続けている。
-        </p>
-      </div>
-
-      <!-- 漫画 -->
-      <div class="glass rounded-2xl p-5 gradient-border">
-        <div class="flex items-center gap-2 mb-2">
-          <span class="text-xl">📚</span>
-          <h3 class="font-bold text-gray-900 dark:text-white">漫画</h3>
-        </div>
-        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-          「左ききのエレン」とコラボレーション。グッドパッチの採用面接で、左ききのエレンをきっかけに応募してくる人が今でもいるほど。
-        </p>
-      </div>
     </div>
   </section>
 
-  <!-- Philosophy / 信条 -->
-  <section class="mb-8">
-    <h2 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-2">
-      <span class="w-1.5 h-6 bg-gradient-to-b from-neon-sky to-gp-600 rounded-full"></span>
-      信条
-    </h2>
-    <div class="glass rounded-2xl p-6 sm:p-8 gradient-border">
-      <div class="space-y-4">
-        <blockquote class="border-l-4 border-gp-600 dark:border-neon-sky pl-4">
-          <p class="text-base sm:text-lg text-gray-800 dark:text-gray-200 font-medium italic leading-relaxed">
-            「とにかく面白い方へ」
-          </p>
-          <footer class="text-sm text-gray-500 dark:text-gray-400 mt-1">— 21歳の大病を経験してからの人生の意思決定基準</footer>
-        </blockquote>
-        <blockquote class="border-l-4 border-gp-600 dark:border-neon-sky pl-4">
-          <p class="text-base sm:text-lg text-gray-800 dark:text-gray-200 font-medium italic leading-relaxed">
-            「ハートを揺さぶるデザインで世界を前進させる」
-          </p>
-          <footer class="text-sm text-gray-500 dark:text-gray-400 mt-1">— Goodpatchのビジョン</footer>
-        </blockquote>
-        <blockquote class="border-l-4 border-gp-600 dark:border-neon-sky pl-4">
-          <p class="text-base sm:text-lg text-gray-800 dark:text-gray-200 font-medium italic leading-relaxed">
-            「デザインの力を証明する」
-          </p>
-          <footer class="text-sm text-gray-500 dark:text-gray-400 mt-1">— Goodpatchのミッション</footer>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- Company / 会社情報 -->
+  <!-- Company / 関連リンク -->
   <section class="mb-8">
     <h2 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-2">
       <span class="w-1.5 h-6 bg-gradient-to-b from-neon-sky to-gp-600 rounded-full"></span>
@@ -240,13 +237,94 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <p class="text-xs text-gray-500 dark:text-gray-400">note.com/naofumit</p>
         </div>
       </a>
-      <a href="https://angl.jp/naofumit" target="_blank" rel="noopener noreferrer" class="group glass rounded-xl p-4 gradient-border hover:shadow-glow transition-all duration-300 flex items-center gap-3">
-        <div class="shrink-0 w-10 h-10 rounded-lg bg-purple-500 flex items-center justify-center">
-          <span class="text-white font-bold text-sm">AP</span>
+    </div>
+  </section>
+
+  <!-- Interviews / 過去のインタビュー記事 -->
+  <section class="mb-8">
+    <h2 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-2">
+      <span class="w-1.5 h-6 bg-gradient-to-b from-neon-sky to-gp-600 rounded-full"></span>
+      過去のインタビュー記事
+    </h2>
+    <div class="space-y-3">
+      <a href="https://journal.startup-db.com/articles/goodpatch" target="_blank" rel="noopener noreferrer" class="group block glass rounded-xl p-4 gradient-border hover:shadow-glow transition-all duration-300">
+        <div class="flex items-start gap-3">
+          <div class="shrink-0 mt-0.5 w-2 h-2 rounded-full bg-gp-600 dark:bg-neon-sky"></div>
+          <div class="flex-1 min-w-0">
+            <p class="text-sm sm:text-base font-semibold text-gray-900 dark:text-white group-hover:gradient-text transition-all leading-snug">大病を患い「とにかく面白い方へ」。グッドパッチ・土屋尚史に訪れた変化</p>
+            <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">STARTUP DB MEDIA</p>
+          </div>
+          <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-gp-600 dark:group-hover:text-neon-sky transition-colors shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
         </div>
-        <div>
-          <p class="font-semibold text-sm text-gray-900 dark:text-white group-hover:gradient-text transition-all">ANGEL PORT</p>
-          <p class="text-xs text-gray-500 dark:text-gray-400">エンジェル投資家ポートフォリオ</p>
+      </a>
+      <a href="https://newspicks.com/news/5271781/body/" target="_blank" rel="noopener noreferrer" class="group block glass rounded-xl p-4 gradient-border hover:shadow-glow transition-all duration-300">
+        <div class="flex items-start gap-3">
+          <div class="shrink-0 mt-0.5 w-2 h-2 rounded-full bg-gp-600 dark:bg-neon-sky"></div>
+          <div class="flex-1 min-w-0">
+            <p class="text-sm sm:text-base font-semibold text-gray-900 dark:text-white group-hover:gradient-text transition-all leading-snug">21歳で大病。死を覚悟して今を生きる</p>
+            <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">NewsPicks</p>
+          </div>
+          <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-gp-600 dark:group-hover:text-neon-sky transition-colors shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+        </div>
+      </a>
+      <a href="https://dimension-note.jp/articles/interview/7068/" target="_blank" rel="noopener noreferrer" class="group block glass rounded-xl p-4 gradient-border hover:shadow-glow transition-all duration-300">
+        <div class="flex items-start gap-3">
+          <div class="shrink-0 mt-0.5 w-2 h-2 rounded-full bg-gp-600 dark:bg-neon-sky"></div>
+          <div class="flex-1 min-w-0">
+            <p class="text-sm sm:text-base font-semibold text-gray-900 dark:text-white group-hover:gradient-text transition-all leading-snug">IPOまでの激動の道のり。起業家にとって重要な素養</p>
+            <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">DIMENSION NOTE（全5話）</p>
+          </div>
+          <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-gp-600 dark:group-hover:text-neon-sky transition-colors shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+        </div>
+      </a>
+      <a href="https://marketeer.jp/tsuchiya/" target="_blank" rel="noopener noreferrer" class="group block glass rounded-xl p-4 gradient-border hover:shadow-glow transition-all duration-300">
+        <div class="flex items-start gap-3">
+          <div class="shrink-0 mt-0.5 w-2 h-2 rounded-full bg-gp-600 dark:bg-neon-sky"></div>
+          <div class="flex-1 min-w-0">
+            <p class="text-sm sm:text-base font-semibold text-gray-900 dark:text-white group-hover:gradient-text transition-all leading-snug">あえて経済的非合理を遂行する。目的から逸れない行動原理とは</p>
+            <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">Marketeer</p>
+          </div>
+          <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-gp-600 dark:group-hover:text-neon-sky transition-colors shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+        </div>
+      </a>
+      <a href="https://goodpatch.com/blog/interview-fukkyy-tsuchiya" target="_blank" rel="noopener noreferrer" class="group block glass rounded-xl p-4 gradient-border hover:shadow-glow transition-all duration-300">
+        <div class="flex items-start gap-3">
+          <div class="shrink-0 mt-0.5 w-2 h-2 rounded-full bg-gp-600 dark:bg-neon-sky"></div>
+          <div class="flex-1 min-w-0">
+            <p class="text-sm sm:text-base font-semibold text-gray-900 dark:text-white group-hover:gradient-text transition-all leading-snug">原点を振り返る ― LayerX福島良典×Goodpatch土屋尚史が語る10年の歩みとデザインの価値</p>
+            <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">Goodpatch Blog</p>
+          </div>
+          <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-gp-600 dark:group-hover:text-neon-sky transition-colors shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+        </div>
+      </a>
+      <a href="https://www.creativevillage.ne.jp/6350" target="_blank" rel="noopener noreferrer" class="group block glass rounded-xl p-4 gradient-border hover:shadow-glow transition-all duration-300">
+        <div class="flex items-start gap-3">
+          <div class="shrink-0 mt-0.5 w-2 h-2 rounded-full bg-gp-600 dark:bg-neon-sky"></div>
+          <div class="flex-1 min-w-0">
+            <p class="text-sm sm:text-base font-semibold text-gray-900 dark:text-white group-hover:gradient-text transition-all leading-snug">グッドパッチCEO 土屋尚史さんに聞く - 起業までと今後のデザイナーに求められること</p>
+            <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">CreativeVillage</p>
+          </div>
+          <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-gp-600 dark:group-hover:text-neon-sky transition-colors shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+        </div>
+      </a>
+      <a href="https://internet.watch.impress.co.jp/docs/interview/1236598.html" target="_blank" rel="noopener noreferrer" class="group block glass rounded-xl p-4 gradient-border hover:shadow-glow transition-all duration-300">
+        <div class="flex items-start gap-3">
+          <div class="shrink-0 mt-0.5 w-2 h-2 rounded-full bg-gp-600 dark:bg-neon-sky"></div>
+          <div class="flex-1 min-w-0">
+            <p class="text-sm sm:text-base font-semibold text-gray-900 dark:text-white group-hover:gradient-text transition-all leading-snug">Googleを長野県に！「長野マウンテンビュー化戦略」の狙い</p>
+            <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">INTERNET Watch</p>
+          </div>
+          <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-gp-600 dark:group-hover:text-neon-sky transition-colors shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+        </div>
+      </a>
+      <a href="https://goodpatch.com/blog/2023-12-makeamark-tsuchiya" target="_blank" rel="noopener noreferrer" class="group block glass rounded-xl p-4 gradient-border hover:shadow-glow transition-all duration-300">
+        <div class="flex items-start gap-3">
+          <div class="shrink-0 mt-0.5 w-2 h-2 rounded-full bg-gp-600 dark:bg-neon-sky"></div>
+          <div class="flex-1 min-w-0">
+            <p class="text-sm sm:text-base font-semibold text-gray-900 dark:text-white group-hover:gradient-text transition-all leading-snug">事業共創を通じて、次世代の「デザインリーダー」を世の中に残していく</p>
+            <p class="text-xs text-gray-400 dark:text-gray-500 mt-1">Goodpatch Blog - MAKE A MARK</p>
+          </div>
+          <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 group-hover:text-gp-600 dark:group-hover:text-neon-sky transition-colors shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
         </div>
       </a>
     </div>
