@@ -43,9 +43,7 @@ const popularArticles = [
   { slug: '2012-07-08-thoughts-on-gunosy', title: 'Gunosyというサービスに関わって思うこと', date: '2012-07-08', description: '弊社GoodpatchはGunosyというサービスにUIデザインで関わっているのですが、非常に多くの人に使ってもらっています', image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghZ4dxEV3OHaCGFuuLBWeNVRq5wFepBTfB5tyoFGQbT0teuonhjOU3HTnkmBZ2B1QFWI7258KF34higR-wyJkW4c8t2kHo0h8TPdcWgHU8ASpMWg91ZhvlTSJsglmdXFhmp4ccKTnLCxyZ/s640/Gunosy%EF%BC%88%E3%82%AF%E3%82%99%E3%83%8E%E3%82%B7%E3%83%BC%EF%BC%89.png' },
   { slug: '2011-08-04-logo-business-founding-members', title: 'ロゴと事業と創業メンバーとパーティーなど', date: '2011-08-04', description: 'この一ヶ月は本当に色んな事がありすぎて全く更新できてませんでした', image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2ygR3oCtuf-Bu8JGqJ-fxyITdxO9QStYbPqPFU_ZW_ABu7bBVLR05vFRmzuSCv_fS3Gtn8JYUAW7UurTQ4VnoCiMD4pmQFdA0Fg1MDmR2lUhIvekPjgXbJo0Fu6jn22CMmO3UMwxPczGS/s400/Artwork.jpg' },
 ];
-// ランダムに5記事選択（ビルド時に固定）
-const shuffled = [...popularArticles].sort(() => Math.random() - 0.5);
-const selectedPopular = shuffled.slice(0, 5);
+// popularArticlesはクライアントサイドでランダム選択するためJSONとして渡す
 ---
 
 <BaseLayout title={page.currentPage === 1 ? "Like a Silicon Valley" : `Page ${page.currentPage}`} isHome={page.currentPage === 1} fullWidth>
@@ -100,40 +98,35 @@ const selectedPopular = shuffled.slice(0, 5);
 
   <!-- Content -->
   <div class="max-w-5xl mx-auto px-4 sm:px-6 py-12">
-    <!-- 人気の記事 (only on page 1) -->
+    <!-- 人気の記事 (only on page 1, client-side random) -->
     {page.currentPage === 1 && (
       <section class="mb-12">
         <div class="flex items-center gap-3 mb-6">
           <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Popular Posts - 人気の記事</h2>
           <div class="flex-1 h-px bg-gradient-to-r from-gray-200 dark:from-white/10 to-transparent"></div>
         </div>
-        <div class="grid gap-4">
-          {selectedPopular.map((article) => (
-            <article class="group glass rounded-2xl p-4 sm:p-6 gradient-border hover:shadow-glow dark:hover:shadow-glow transition-all duration-300 overflow-hidden">
-              <a href={`/posts/${article.slug}`} class="flex gap-4 sm:gap-5">
+        <div id="popular-posts-container" class="grid gap-4"></div>
+        <script define:vars={{ popularArticles }}>
+          const shuffled = [...popularArticles].sort(() => Math.random() - 0.5);
+          const selected = shuffled.slice(0, 5);
+          const container = document.getElementById('popular-posts-container');
+          container.innerHTML = selected.map(article => {
+            const d = new Date(article.date);
+            const dateStr = d.toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' });
+            return `<article class="group glass rounded-2xl p-4 sm:p-6 gradient-border hover:shadow-glow dark:hover:shadow-glow transition-all duration-300 overflow-hidden">
+              <a href="/posts/${article.slug}" class="flex gap-4 sm:gap-5">
                 <div class="shrink-0 w-20 h-20 sm:w-28 sm:h-28 rounded-xl overflow-hidden">
-                  <img
-                    src={article.image}
-                    alt={article.title}
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
+                  <img src="${article.image}" alt="${article.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                 </div>
                 <div class="flex-1 min-w-0 flex flex-col justify-center">
-                  <time class="text-xs sm:text-sm font-mono text-gray-400 dark:text-gray-500">
-                    {new Date(article.date).toLocaleDateString('ja-JP', { year: 'numeric', month: 'long', day: 'numeric' })}
-                  </time>
-                  <h3 class="text-base sm:text-lg font-bold text-gray-900 dark:text-white group-hover:gradient-text transition-all duration-300 leading-snug line-clamp-2 mt-1">
-                    {article.title}
-                  </h3>
-                  <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 mt-1 leading-relaxed hidden sm:block">
-                    {article.description}
-                  </p>
+                  <time class="text-xs sm:text-sm font-mono text-gray-400 dark:text-gray-500">${dateStr}</time>
+                  <h3 class="text-base sm:text-lg font-bold text-gray-900 dark:text-white group-hover:gradient-text transition-all duration-300 leading-snug line-clamp-2 mt-1">${article.title}</h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 mt-1 leading-relaxed hidden sm:block">${article.description}</p>
                 </div>
               </a>
-            </article>
-          ))}
-        </div>
+            </article>`;
+          }).join('');
+        </script>
       </section>
     )}
 
