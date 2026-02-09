@@ -1,0 +1,254 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About" description="土屋尚史（つちや なおふみ） - 株式会社グッドパッチ 代表取締役社長兼CEO。デザインの力を証明する起業家。">
+  <!-- Header -->
+  <div class="flex items-center gap-3 mb-8">
+    <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+      About
+    </h1>
+    <div class="flex-1 h-px bg-gradient-to-r from-gray-200 dark:from-white/10 to-transparent"></div>
+  </div>
+
+  <!-- Profile Card -->
+  <div class="glass rounded-2xl p-6 sm:p-8 gradient-border mb-8">
+    <div class="flex flex-col sm:flex-row gap-6 items-start">
+      <div class="shrink-0 w-24 h-24 sm:w-32 sm:h-32 rounded-2xl overflow-hidden shadow-lg">
+        <img
+          src="https://assets.st-note.com/production/uploads/images/4015733/profile_bcb64900e77edce3d9e18e498fed45af.jpeg"
+          alt="土屋尚史"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="flex-1">
+        <h2 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-1">
+          土屋 尚史 <span class="text-base font-normal text-gray-400 dark:text-gray-500">Naofumi Tsuchiya</span>
+        </h2>
+        <p class="text-sm sm:text-base text-gp-600 dark:text-neon-sky font-medium mb-3">
+          株式会社グッドパッチ 代表取締役社長 兼 CEO
+        </p>
+        <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+          1983年生まれ、長野県佐久市出身。「ハートを揺さぶるデザインで世界を前進させる」をビジョンに掲げ、デザインの力でビジネスを変革するデザインカンパニーを経営。
+        </p>
+        <!-- SNS Links -->
+        <div class="flex items-center gap-3 mt-4">
+          <a href="https://x.com/tsuchinao83" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            @tsuchinao83
+          </a>
+          <a href="https://note.com/naofumit" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="4" fill="currentColor" opacity="0.15"/><text x="12" y="16" text-anchor="middle" font-size="11" font-weight="bold" fill="currentColor">n</text></svg>
+            note
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Career / 経歴 -->
+  <section class="mb-8">
+    <h2 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-2">
+      <span class="w-1.5 h-6 bg-gradient-to-b from-neon-sky to-gp-600 rounded-full"></span>
+      経歴
+    </h2>
+    <div class="space-y-0 ml-4 border-l-2 border-gray-200/50 dark:border-white/[0.08] pl-6">
+      <!-- Timeline items -->
+      <div class="relative pb-6">
+        <span class="absolute -left-[calc(1.5rem+5px)] top-1.5 w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+        <time class="text-xs font-mono text-gray-400 dark:text-gray-500">1983年</time>
+        <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mt-0.5">長野県佐久市に生まれる</p>
+      </div>
+      <div class="relative pb-6">
+        <span class="absolute -left-[calc(1.5rem+5px)] top-1.5 w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+        <time class="text-xs font-mono text-gray-400 dark:text-gray-500">2002年</time>
+        <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mt-0.5">長野県立野沢北高等学校 卒業</p>
+      </div>
+      <div class="relative pb-6">
+        <span class="absolute -left-[calc(1.5rem+5px)] top-1.5 w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+        <time class="text-xs font-mono text-gray-400 dark:text-gray-500">2004年</time>
+        <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mt-0.5">21歳の時に大病を経験。この体験が「面白い方へ進む」という人生の意思決定の原点に</p>
+      </div>
+      <div class="relative pb-6">
+        <span class="absolute -left-[calc(1.5rem+5px)] top-1.5 w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+        <time class="text-xs font-mono text-gray-400 dark:text-gray-500">2006年</time>
+        <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mt-0.5">関西大学社会学部を中退。イデアキューブ株式会社に入社</p>
+      </div>
+      <div class="relative pb-6">
+        <span class="absolute -left-[calc(1.5rem+5px)] top-1.5 w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+        <time class="text-xs font-mono text-gray-400 dark:text-gray-500">2007年〜</time>
+        <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mt-0.5">株式会社フィードフォース、大阪のWebデザイン会社でWebディレクターとしてキャリアを積む</p>
+      </div>
+      <div class="relative pb-6">
+        <span class="absolute -left-[calc(1.5rem+5px)] top-1.5 w-2.5 h-2.5 rounded-full bg-gradient-to-b from-neon-sky to-gp-600"></span>
+        <time class="text-xs font-mono text-gray-400 dark:text-gray-500">2011年3月</time>
+        <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mt-0.5">サンフランシスコに渡米。btrax Inc.にてスタートアップの海外進出支援に従事</p>
+      </div>
+      <div class="relative pb-6">
+        <span class="absolute -left-[calc(1.5rem+5px)] top-1.5 w-2.5 h-2.5 rounded-full bg-gradient-to-b from-neon-sky to-gp-600 shadow-glow"></span>
+        <time class="text-xs font-mono text-gp-600 dark:text-neon-sky font-semibold">2011年9月</time>
+        <p class="text-sm sm:text-base text-gray-900 dark:text-white font-semibold mt-0.5">株式会社グッドパッチを設立</p>
+        <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-1">秋葉原の10坪のオフィスからスタート。UI/UXデザインを強みにしたプロダクト開発で、GunosyやマネーフォワードなどのUIデザインを手掛け話題に</p>
+      </div>
+      <div class="relative pb-6">
+        <span class="absolute -left-[calc(1.5rem+5px)] top-1.5 w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+        <time class="text-xs font-mono text-gray-400 dark:text-gray-500">2017年</time>
+        <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mt-0.5">経済産業省 第4次産業革命クリエイティブ研究会 委員</p>
+      </div>
+      <div class="relative pb-6">
+        <span class="absolute -left-[calc(1.5rem+5px)] top-1.5 w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+        <time class="text-xs font-mono text-gray-400 dark:text-gray-500">2018年</time>
+        <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mt-0.5">フルリモートデザインチーム「Goodpatch Anywhere」をリリース</p>
+      </div>
+      <div class="relative pb-6">
+        <span class="absolute -left-[calc(1.5rem+5px)] top-1.5 w-2.5 h-2.5 rounded-full bg-gradient-to-b from-neon-sky to-gp-600 shadow-glow"></span>
+        <time class="text-xs font-mono text-gp-600 dark:text-neon-sky font-semibold">2020年6月</time>
+        <p class="text-sm sm:text-base text-gray-900 dark:text-white font-semibold mt-0.5">デザイン会社として初の東証マザーズ上場（証券コード:7351）</p>
+      </div>
+      <div class="relative pb-6">
+        <span class="absolute -left-[calc(1.5rem+5px)] top-1.5 w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+        <time class="text-xs font-mono text-gray-400 dark:text-gray-500">2023年6月</time>
+        <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mt-0.5">株式会社丸井グループ 執行役員CDXO に就任</p>
+      </div>
+      <div class="relative pb-6">
+        <span class="absolute -left-[calc(1.5rem+5px)] top-1.5 w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+        <time class="text-xs font-mono text-gray-400 dark:text-gray-500">2024年10月</time>
+        <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mt-0.5">株式会社ピープルアンドデザイン 代表取締役社長に就任</p>
+      </div>
+      <div class="relative">
+        <span class="absolute -left-[calc(1.5rem+5px)] top-1.5 w-2.5 h-2.5 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+        <time class="text-xs font-mono text-gray-400 dark:text-gray-500">2025年10月</time>
+        <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 mt-0.5">株式会社Layermate 代表取締役に就任。デザインとAIの未来を共に描く</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interests / 趣味・好きなもの -->
+  <section class="mb-8">
+    <h2 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-2">
+      <span class="w-1.5 h-6 bg-gradient-to-b from-neon-sky to-gp-600 rounded-full"></span>
+      趣味・好きなもの
+    </h2>
+    <div class="grid gap-4 sm:grid-cols-2">
+      <!-- 映画 -->
+      <div class="glass rounded-2xl p-5 gradient-border">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-xl">🎬</span>
+          <h3 class="font-bold text-gray-900 dark:text-white">映画</h3>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          Pixar作品の大ファン。グッドパッチの会議室はPixarキャラクターの名前が付けられている。特にトイ・ストーリー3が好き。
+        </p>
+      </div>
+
+      <!-- 野球 -->
+      <div class="glass rounded-2xl p-5 gradient-border">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-xl">⚾</span>
+          <h3 class="font-bold text-gray-900 dark:text-white">野球</h3>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          小学校から野球に打ち込む。あだち充の「H2」「タッチ」など高校野球漫画が好き。
+        </p>
+      </div>
+
+      <!-- デザイン -->
+      <div class="glass rounded-2xl p-5 gradient-border">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-xl">🎨</span>
+          <h3 class="font-bold text-gray-900 dark:text-white">デザイン</h3>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          UI/UXデザインへの強いこだわり。「デザインの力を証明する」をミッションに、ビジネスとデザインの融合を追求し続けている。
+        </p>
+      </div>
+
+      <!-- 漫画 -->
+      <div class="glass rounded-2xl p-5 gradient-border">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-xl">📚</span>
+          <h3 class="font-bold text-gray-900 dark:text-white">漫画</h3>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          「左ききのエレン」とコラボレーション。グッドパッチの採用面接で、左ききのエレンをきっかけに応募してくる人が今でもいるほど。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy / 信条 -->
+  <section class="mb-8">
+    <h2 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-2">
+      <span class="w-1.5 h-6 bg-gradient-to-b from-neon-sky to-gp-600 rounded-full"></span>
+      信条
+    </h2>
+    <div class="glass rounded-2xl p-6 sm:p-8 gradient-border">
+      <div class="space-y-4">
+        <blockquote class="border-l-4 border-gp-600 dark:border-neon-sky pl-4">
+          <p class="text-base sm:text-lg text-gray-800 dark:text-gray-200 font-medium italic leading-relaxed">
+            「とにかく面白い方へ」
+          </p>
+          <footer class="text-sm text-gray-500 dark:text-gray-400 mt-1">— 21歳の大病を経験してからの人生の意思決定基準</footer>
+        </blockquote>
+        <blockquote class="border-l-4 border-gp-600 dark:border-neon-sky pl-4">
+          <p class="text-base sm:text-lg text-gray-800 dark:text-gray-200 font-medium italic leading-relaxed">
+            「ハートを揺さぶるデザインで世界を前進させる」
+          </p>
+          <footer class="text-sm text-gray-500 dark:text-gray-400 mt-1">— Goodpatchのビジョン</footer>
+        </blockquote>
+        <blockquote class="border-l-4 border-gp-600 dark:border-neon-sky pl-4">
+          <p class="text-base sm:text-lg text-gray-800 dark:text-gray-200 font-medium italic leading-relaxed">
+            「デザインの力を証明する」
+          </p>
+          <footer class="text-sm text-gray-500 dark:text-gray-400 mt-1">— Goodpatchのミッション</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company / 会社情報 -->
+  <section class="mb-8">
+    <h2 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-2">
+      <span class="w-1.5 h-6 bg-gradient-to-b from-neon-sky to-gp-600 rounded-full"></span>
+      関連リンク
+    </h2>
+    <div class="grid gap-3 sm:grid-cols-2">
+      <a href="https://goodpatch.com" target="_blank" rel="noopener noreferrer" class="group glass rounded-xl p-4 gradient-border hover:shadow-glow transition-all duration-300 flex items-center gap-3">
+        <div class="shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-neon-sky to-gp-600 flex items-center justify-center">
+          <span class="text-white font-bold text-sm">G</span>
+        </div>
+        <div>
+          <p class="font-semibold text-sm text-gray-900 dark:text-white group-hover:gradient-text transition-all">Goodpatch Inc.</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400">goodpatch.com</p>
+        </div>
+      </a>
+      <a href="https://x.com/tsuchinao83" target="_blank" rel="noopener noreferrer" class="group glass rounded-xl p-4 gradient-border hover:shadow-glow transition-all duration-300 flex items-center gap-3">
+        <div class="shrink-0 w-10 h-10 rounded-lg bg-gray-900 dark:bg-white flex items-center justify-center">
+          <svg class="w-5 h-5 text-white dark:text-gray-900" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </div>
+        <div>
+          <p class="font-semibold text-sm text-gray-900 dark:text-white group-hover:gradient-text transition-all">X (Twitter)</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400">@tsuchinao83</p>
+        </div>
+      </a>
+      <a href="https://note.com/naofumit" target="_blank" rel="noopener noreferrer" class="group glass rounded-xl p-4 gradient-border hover:shadow-glow transition-all duration-300 flex items-center gap-3">
+        <div class="shrink-0 w-10 h-10 rounded-lg bg-green-500 flex items-center justify-center">
+          <span class="text-white font-bold text-lg">n</span>
+        </div>
+        <div>
+          <p class="font-semibold text-sm text-gray-900 dark:text-white group-hover:gradient-text transition-all">note</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400">note.com/naofumit</p>
+        </div>
+      </a>
+      <a href="https://angl.jp/naofumit" target="_blank" rel="noopener noreferrer" class="group glass rounded-xl p-4 gradient-border hover:shadow-glow transition-all duration-300 flex items-center gap-3">
+        <div class="shrink-0 w-10 h-10 rounded-lg bg-purple-500 flex items-center justify-center">
+          <span class="text-white font-bold text-sm">AP</span>
+        </div>
+        <div>
+          <p class="font-semibold text-sm text-gray-900 dark:text-white group-hover:gradient-text transition-all">ANGEL PORT</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400">エンジェル投資家ポートフォリオ</p>
+        </div>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
