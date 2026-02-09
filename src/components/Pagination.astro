@@ -9,7 +9,8 @@ const { currentPage, totalPages, baseUrl } = Astro.props;
 
 function pageUrl(page: number) {
   if (page === 1) return baseUrl;
-  return `${baseUrl}/${page}`;
+  const base = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
+  return `${base}/${page}`;
 }
 ---
 
