@@ -24,7 +24,7 @@ const topTags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8)
 const totalPosts = allPosts.length;
 ---
 
-<BaseLayout title={page.currentPage === 1 ? "Top" : `Page ${page.currentPage}`} fullWidth>
+<BaseLayout title={page.currentPage === 1 ? "Like a Silicon Valley" : `Page ${page.currentPage}`} isHome={page.currentPage === 1} fullWidth>
   <!-- Hero Section (only on page 1) -->
   {page.currentPage === 1 && (
     <section class="relative overflow-hidden text-white min-h-[520px] sm:min-h-[600px] flex items-end">
