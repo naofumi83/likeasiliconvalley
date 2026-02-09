@@ -2,7 +2,7 @@
 title: "第2回JapanNight大盛況でした！"
 date: 2011-06-29
 description: "[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBJ0ySde7mKgVDDNunY9MZOj7YDGO4MY0C4ZtdTm8enCfIctG54Prdbo"
-tags: []
+tags: ['サンフランシスコ', 'イベント']
 source: "blogspot"
 ---
 

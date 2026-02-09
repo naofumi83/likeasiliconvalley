@@ -2,7 +2,7 @@
 title: "EtsyでMac Book Airケースを注文してみた"
 date: 2012-03-19
 description: "[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNlMUdYQX5WylTnCwdXwM4M-Z7hpr38tpWcSrFNp94q9xld7WDEfDk2i"
-tags: []
+tags: ['サービス']
 source: "blogspot"
 ---
 

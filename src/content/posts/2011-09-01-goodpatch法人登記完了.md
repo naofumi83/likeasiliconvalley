@@ -2,7 +2,7 @@
 title: "Goodpatch法人登記完了"
 date: 2011-09-01
 description: "[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlmFOLPaNxlm5-B97d0n-ODAGLLayNyKjZBbbdz7jTUkcT9q01Tm3imu"
-tags: []
+tags: ['起業', 'Goodpatch']
 source: "blogspot"
 ---
 

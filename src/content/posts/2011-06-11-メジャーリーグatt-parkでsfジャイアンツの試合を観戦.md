@@ -2,7 +2,7 @@
 title: "メジャーリーグAT＆T ParkでSFジャイアンツの試合を観戦"
 date: 2011-06-11
 description: "[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5UWNYraX8cTlRjvJg9RuhOCW-dzq29eEm-7pWXZfktRTfA-6om7OrGL"
-tags: []
+tags: ['サンフランシスコ']
 source: "blogspot"
 ---
 

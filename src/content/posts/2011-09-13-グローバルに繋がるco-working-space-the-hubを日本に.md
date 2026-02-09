@@ -2,7 +2,7 @@
 title: "グローバルに繋がるCo-working Space\" THE HUB\"を日本に"
 date: 2011-09-13
 description: "[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFoARTivGk-8PLmkVpsYEWmgk999qh6m-SmVQoqyK7leyOE8fBEhNYtp"
-tags: []
+tags: ['サンフランシスコ', 'オフィス']
 source: "blogspot"
 ---
 

@@ -2,7 +2,7 @@
 title: "Startup Weekend Tokyoで優勝しました！"
 date: 2012-05-15
 description: "[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikHqaQKgcoZOCJiSwUDlCrzsQNomnQu7lO7XjO2xxvDFPDGzVPYZ7Onk"
-tags: []
+tags: ['起業', 'イベント']
 source: "blogspot"
 ---
 

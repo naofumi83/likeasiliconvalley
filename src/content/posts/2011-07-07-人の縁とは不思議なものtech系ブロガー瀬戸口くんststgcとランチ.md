@@ -2,7 +2,7 @@
 title: "人の縁とは不思議なもの｜Tech系ブロガー瀬戸口くん@ststgcとランチ"
 date: 2011-07-07
 description: "[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVRjcbnGzNHprsq5_xG8jBfqIH_lnUQ3ojn-upZ29zWMkEavqC1IWTyk"
-tags: []
+tags: ['人']
 source: "blogspot"
 ---
 

@@ -2,7 +2,7 @@
 title: "btraxでECstudioの山本社長がインターン中"
 date: 2011-08-28
 description: "[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjY27t9p_t4zSQiDHijK6a_xhEzetH6RKR8cTjaUfQknyFsnDHIC2cOMT"
-tags: []
+tags: ['サンフランシスコ', '人']
 source: "blogspot"
 ---
 

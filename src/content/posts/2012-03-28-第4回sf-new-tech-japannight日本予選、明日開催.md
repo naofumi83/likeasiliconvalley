@@ -2,7 +2,7 @@
 title: "第4回SF New Tech JapanNight日本予選、明日開催！"
 date: 2012-03-28
 description: "[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMTLcujnxVb2BX0Rss_7fJNGSeT7S7V8VYP3k-wXcF0i2OIeWiAG2VPq"
-tags: []
+tags: ['イベント']
 source: "blogspot"
 ---
 

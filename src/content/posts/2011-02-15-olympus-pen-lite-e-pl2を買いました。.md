@@ -2,7 +2,7 @@
 title: "OLYMPUS PEN Lite E-PL2を買いました。"
 date: 2011-02-15
 description: "シリコンバレーのことを調べていると  ブログなどでシリコンバレーやカリフォルニアの写真が よく載っているいるのですが、  参考  [JTPA シリコンバレー・カンファレンス 2009とGoogle・Apple・IDEO会社訪問に行ってきまし"
-tags: []
+tags: ['サンフランシスコ']
 source: "blogspot"
 ---
 

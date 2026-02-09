@@ -2,7 +2,7 @@
 title: "JapanNightまであと一ヶ月！"
 date: 2011-05-28
 description: "[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixSpaRlhmGq-Z7VEaj2UgKVgQ5VZuYTFpDwVbXJzqPjrnN_axkL453wb"
-tags: []
+tags: ['サンフランシスコ', 'イベント']
 source: "blogspot"
 ---
 

@@ -2,7 +2,7 @@
 title: "San Franciscoのその他Co-working Space｜dogpatchLabs、RocketSpaceなど"
 date: 2011-09-21
 description: "先週のSan Francisco滞在中にSan FranciscoのCo-working Spaceをいくつか回ったのでその写真をアップ。  **・DogpatchLabs**  弊社[Goodpatch](http://good-patc"
-tags: []
+tags: ['サンフランシスコ', 'オフィス']
 source: "blogspot"
 ---
 

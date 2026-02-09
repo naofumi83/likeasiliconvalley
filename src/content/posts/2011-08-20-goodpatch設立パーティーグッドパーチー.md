@@ -2,7 +2,7 @@
 title: "Goodpatch設立パーティー（グッドパーチー）"
 date: 2011-08-20
 description: "[![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9yZX1585yeXsjUla8udHYhgjDMjHnKs0nV7uMce6ND7_VJ6DoitMGbQ"
-tags: []
+tags: ['起業', 'Goodpatch', 'イベント']
 source: "blogspot"
 ---
 
