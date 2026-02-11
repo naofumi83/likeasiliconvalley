@@ -4,7 +4,7 @@ const navItems = [
   { label: 'Blog Archive', href: '/archive' },
   { label: 'note', href: '/note' },
   { label: 'Tags', href: '/tags' },
-  { label: 'Search', href: '/search' },
+  { label: 'Search', href: '/search', icon: true },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -22,7 +22,7 @@ const currentPath = Astro.url.pathname;
 
       <!-- Navigation -->
       <nav class="hidden sm:flex items-center gap-0.5">
-        {navItems.map(({ label, href }) => (
+        {navItems.map(({ label, href, icon }) => (
           <a
             href={href}
             class:list={[
@@ -31,8 +31,13 @@ const currentPath = Astro.url.pathname;
                 ? 'bg-gp-600/10 dark:bg-neon-sky/10 text-gp-700 dark:text-neon-sky'
                 : 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/[0.04]',
             ]}
+            aria-label={icon ? label : undefined}
           >
-            {label}
+            {icon ? (
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            ) : label}
           </a>
         ))}
 
@@ -82,17 +87,24 @@ const currentPath = Astro.url.pathname;
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden sm:hidden pb-4 pt-2 border-t border-gray-200/30 dark:border-white/[0.04]">
       <nav class="flex flex-col gap-0.5">
-        {navItems.map(({ label, href }) => (
+        {navItems.map(({ label, href, icon }) => (
           <a
             href={href}
             class:list={[
-              'px-3.5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200',
+              'px-3.5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 flex items-center gap-2',
               currentPath === href || (href !== '/' && currentPath.startsWith(href))
                 ? 'bg-gp-600/10 dark:bg-neon-sky/10 text-gp-700 dark:text-neon-sky'
                 : 'text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-white/[0.04]',
             ]}
           >
-            {label}
+            {icon ? (
+              <>
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <span>{label}</span>
+              </>
+            ) : label}
           </a>
         ))}
       </nav>
