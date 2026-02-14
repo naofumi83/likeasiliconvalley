@@ -9,17 +9,44 @@ interface Props {
   image?: string;
   fullWidth?: boolean;
   isHome?: boolean;
+  publishedDate?: Date;
 }
 
 const SITE_NAME = 'Like a Silicon Valley';
+const SITE_URL = 'https://likeasiliconvalley.com';
 const DEFAULT_DESCRIPTION = 'Goodpatchの創業者土屋がサンフランシスコに行く前から起業後数年間（2010~2017年）を書き記したブログをまとめたサイトです';
 const DEFAULT_OGP_IMAGE = '/images/ogp.png';
+const AUTHOR_NAME = '土屋尚史';
 
-const { title, description = DEFAULT_DESCRIPTION, image, fullWidth = false, isHome = false } = Astro.props;
+const { title, description = DEFAULT_DESCRIPTION, image, fullWidth = false, isHome = false, publishedDate } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const pageTitle = isHome ? SITE_NAME : `${title} | ${SITE_NAME}`;
 const ogImage = image ? new URL(image, Astro.site) : new URL(DEFAULT_OGP_IMAGE, Astro.site);
 const ogType = isHome ? 'website' : 'article';
+const isArticle = !!publishedDate;
+
+const jsonLd = isHome
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: SITE_NAME,
+      url: SITE_URL,
+      description: DEFAULT_DESCRIPTION,
+      author: { '@type': 'Person', name: AUTHOR_NAME },
+    }
+  : isArticle
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: title,
+        description: description,
+        image: ogImage.toString(),
+        datePublished: publishedDate!.toISOString(),
+        author: { '@type': 'Person', name: AUTHOR_NAME, url: 'https://x.com/tsuchinao83' },
+        publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalURL.toString() },
+      }
+    : null;
 ---
 
 <!doctype html>
@@ -29,6 +56,8 @@ const ogType = isHome ? 'website' : 'article';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content={AUTHOR_NAME} />
 
     <!-- OGP -->
     <meta property="og:title" content={pageTitle} />
@@ -40,6 +69,8 @@ const ogType = isHome ? 'website' : 'article';
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Like a Silicon Valley" />
     <meta property="og:locale" content="ja_JP" />
+    {isArticle && <meta property="article:published_time" content={publishedDate!.toISOString()} />}
+    {isArticle && <meta property="article:author" content={AUTHOR_NAME} />}
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -47,8 +78,12 @@ const ogType = isHome ? 'website' : 'article';
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
-    <!-- Favicon -->
+    <!-- Favicon & RSS -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title={SITE_NAME} href="/rss.xml" />
+
+    <!-- JSON-LD -->
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
 
     <title>{pageTitle}</title>
 

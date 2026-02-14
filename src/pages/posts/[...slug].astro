@@ -32,7 +32,7 @@ const shareText = `${post.data.title} | Like a Silicon Valley`;
 const xShareUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(postUrl)}`;
 ---
 
-<BaseLayout title={post.data.title} description={post.data.description} image={post.data.image}>
+<BaseLayout title={post.data.title} description={post.data.description} image={post.data.image} publishedDate={post.data.date}>
   <article data-pagefind-body>
     <header class="mb-6 sm:mb-10">
       <div class="flex items-center gap-2.5 mb-4">
